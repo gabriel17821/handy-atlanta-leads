@@ -112,14 +112,14 @@ function Index() {
 function Nav() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 sm:h-28 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <img
             src={logoImg}
             alt="Come In Handy — Hauling & Cleaning"
-            width={72}
-            height={48}
-            className="h-12 sm:h-16 w-auto object-contain"
+            width={120}
+            height={80}
+            className="h-16 sm:h-24 w-auto object-contain"
           />
           <span className="hidden sm:inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-brand">
             Atlanta
@@ -173,7 +173,7 @@ function Hero() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <header id="top" className="pt-24 sm:pt-32 pb-10 sm:pb-20 px-4 sm:px-6">
+    <header id="top" className="pt-28 sm:pt-36 pb-10 sm:pb-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider mb-5">
@@ -183,7 +183,7 @@ function Hero() {
             </span>
             Available Today in Atlanta
           </div>
-          <h1 className="font-heading font-extrabold text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.92] tracking-tighter mb-6">
+          <h1 className="font-heading font-extrabold text-5xl xs:text-6xl sm:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] leading-[0.88] tracking-tighter mb-6">
             WE CLEAR
             <br />
             <span className="text-brand italic uppercase">THE JUNK</span>,
