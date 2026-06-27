@@ -1,4 +1,4 @@
-﻿import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Phone,
@@ -30,17 +30,21 @@ import garageCleanout from "../assets/garage-cleanout.png";
 import yardDebris from "../assets/yard-debris.png";
 import furnitureDisposal from "../assets/furniture-disposal.png";
 import melissaJob from "../assets/melissa-job.png";
+import atlantaHouse from "../assets/atlanta-house.png";
+import mattressRemoval from "../assets/mattress-removal.png";
+import estateCleanout from "../assets/estate-cleanout.png";
+import applianceRemoval from "../assets/appliance-removal.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Come In Handy Atlanta â€” Same-Day Junk Removal, Hauling & Cleaning" },
+      { title: "Come In Handy Atlanta — Same-Day Junk Removal, Hauling & Cleaning" },
       {
         name: "description",
         content:
           "Atlanta's owner-operated junk removal, hauling, and cleaning service. Same-day pickup for furniture, appliances, yard debris & property clean-outs. Call Aaron: 330-412-6268.",
       },
-      { property: "og:title", content: "Come In Handy Atlanta â€” Same-Day Junk Removal & Hauling" },
+      { property: "og:title", content: "Come In Handy Atlanta — Same-Day Junk Removal & Hauling" },
       {
         property: "og:description",
         content:
@@ -113,7 +117,7 @@ function Nav() {
         <a href="#top" className="flex items-center gap-2">
           <img
             src={logoImg}
-            alt="Come In Handy â€” Hauling & Cleaning"
+            alt="Come In Handy — Hauling & Cleaning"
             width={72}
             height={48}
             className="h-12 sm:h-16 w-auto object-contain"
@@ -214,7 +218,7 @@ function Hero() {
             />
             <div>
               <p className="text-sm font-bold">Owner Operated</p>
-              <p className="text-xs text-slate-500">Talk to Aaron directly â€” no call centers.</p>
+              <p className="text-xs text-slate-500">Talk to Aaron directly — no call centers.</p>
             </div>
           </div>
         </div>
@@ -313,10 +317,10 @@ function Hero() {
               ))}
             </div>
             <p className="text-xs sm:text-sm italic text-slate-750 leading-relaxed font-medium">
-              â€œI had a huge project and wasn't sure how I was going to get it doneâ€¦ Aaron came in handy and did just that.â€
+              “I had a huge project and wasn't sure how I was going to get it done… Aaron came in handy and did just that.”
             </p>
             <div className="flex items-center justify-between text-[11px] border-t border-brand/10 pt-2 mt-1">
-              <span className="font-bold text-navy">â€” Melissa S.</span>
+              <span className="font-bold text-navy">— Melissa S.</span>
               <span className="text-[10px] uppercase tracking-wider text-brand font-semibold">Yelp</span>
             </div>
           </div>
@@ -397,7 +401,7 @@ function Services() {
               HANDY SERVICES
             </h2>
             <p className="text-slate-400 mt-4 max-w-md">
-              Everything from a single mattress haul-away to full-scale property cleanouts â€”
+              Everything from a single mattress haul-away to full-scale property cleanouts —
               under one phone number.
             </p>
           </div>
@@ -424,6 +428,26 @@ function Services() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Services CTA */}
+        <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#quote"
+            id="services-cta-quote"
+            className="inline-flex items-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
+          >
+            <ArrowRight className="size-4" />
+            Get a Same-Day Quote
+          </a>
+          <a
+            href={PHONE_HREF}
+            id="services-cta-call"
+            className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-base hover:bg-white/10 transition-colors"
+          >
+            <Phone className="size-4" />
+            Or Call Aaron: 330-412-6268
+          </a>
         </div>
       </div>
     </section>
@@ -453,6 +477,17 @@ function FullServiceList() {
             </div>
           ))}
         </div>
+        
+        {/* FullServiceList CTA */}
+        <div className="mt-12 text-center">
+          <a
+            href={PHONE_HREF}
+            className="inline-flex items-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-brand/20"
+          >
+            <Phone className="size-4" />
+            Still not sure? Call Aaron: 330-412-6268
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -463,7 +498,7 @@ function HowItWorks() {
     {
       n: "01",
       title: "Call or text Aaron",
-      desc: "One quick call to 330-412-6268. Send a photo of what needs to go â€” get a no-pressure ballpark on the spot.",
+      desc: "One quick call to 330-412-6268. Send a photo of what needs to go — get a no-pressure ballpark on the spot.",
     },
     {
       n: "02",
@@ -473,7 +508,7 @@ function HowItWorks() {
     {
       n: "03",
       title: "We haul, you breathe",
-      desc: "We do all the lifting, loading, and disposal. You point â€” we take it from there.",
+      desc: "We do all the lifting, loading, and disposal. You point — we take it from there.",
     },
   ];
   return (
@@ -498,6 +533,41 @@ function HowItWorks() {
             </div>
           ))}
         </div>
+
+        {/* HowItWorks CTA — natural next step after the 3 steps */}
+        <div className="mt-16 bg-slate-50 rounded-3xl border border-slate-200 p-8 sm:p-10 text-center">
+          <div className="inline-flex items-center gap-2 bg-brand/10 text-brand text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
+            </span>
+            Available Today
+          </div>
+          <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-navy mb-3">
+            Ready? Start with Step&nbsp;1.
+          </h3>
+          <p className="text-slate-500 mb-6 max-w-sm mx-auto text-sm leading-relaxed">
+            One call is all it takes. Aaron picks up personally and gives you a ballpark on the spot.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href={PHONE_HREF}
+              id="how-it-works-cta-call"
+              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
+            >
+              <Phone className="size-5" />
+              Call Aaron Now: 330-412-6268
+            </a>
+            <a
+              href="#quote"
+              id="how-it-works-cta-quote"
+              className="inline-flex items-center justify-center gap-2 border border-slate-200 text-navy px-8 py-4 rounded-2xl font-bold text-base hover:border-brand hover:text-brand transition-colors"
+            >
+              <ArrowRight className="size-4" />
+              Request a Quote Online
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -510,69 +580,163 @@ function Gallery() {
       desc: "Full removal of old storage boxes, furniture, and junk. Swept clean afterward.",
       category: "Junk Removal",
       image: garageCleanout,
+      location: "Buckhead, GA",
     },
     {
       title: "Backyard Debris Cleanup",
       desc: "Clearing piled-up branches, brush, leaves, and organic yard waste.",
       category: "Hauling",
       image: yardDebris,
+      location: "Decatur, GA",
     },
     {
       title: "Furniture & Estate Disposal",
       desc: "Clearing out heavy old couches, chairs, and electronic junk from residential spaces.",
       category: "Clean-outs",
       image: furnitureDisposal,
+      location: "Sandy Springs, GA",
+    },
+    {
+      title: "Mattress & Bulk Item Removal",
+      desc: "Same-day pickup of mattresses, box springs, and oversized bulk items. No hassle.",
+      category: "Junk Removal",
+      image: mattressRemoval,
+      location: "Smyrna, GA",
+    },
+    {
+      title: "Full Estate Clean-out",
+      desc: "Complete interior clear-out for estates, foreclosures, and move-out situations.",
+      category: "Clean-outs",
+      image: estateCleanout,
+      location: "Marietta, GA",
+    },
+    {
+      title: "Appliance Disposal",
+      desc: "Refrigerators, washers, dryers — we haul every appliance safely and responsibly.",
+      category: "Hauling",
+      image: applianceRemoval,
+      location: "Roswell, GA",
     },
   ];
 
-  return (
-    <section id="gallery" className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6">
-        <div className="text-center mb-14">
-          <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
-            Our Work
-          </p>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
-            Before & After Gallery
-          </h2>
-          <p className="text-slate-600 mt-4 max-w-xl mx-auto leading-relaxed">
-            See the actual results of Aaron's work across Atlanta. Move-out cleanouts, yard waste hauling, and same-day junk clearing.
-          </p>
-        </div>
+  // Duplicate the array so the loop is truly seamless — animate exactly -50% of track width
+  const loopItems = [...items, ...items];
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {items.map(({ title, desc, category, image }) => (
+  return (
+    <section id="gallery" className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200 overflow-hidden">
+      <style>{`
+        @keyframes gallery-scroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .gallery-track {
+          display: flex;
+          width: max-content;
+          animation: gallery-scroll 48s linear infinite;
+          will-change: transform;
+        }
+        .gallery-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      {/* Header */}
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
+              Our Work
+            </p>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+              Before & After Gallery
+            </h2>
+            <p className="text-slate-600 mt-3 max-w-xl leading-relaxed">
+              Real jobs across metro Atlanta — hover any card to pause.
+            </p>
+          </div>
+          <div className="hidden sm:flex items-center gap-3 shrink-0 text-xs text-slate-400 font-medium">
+            <span className="flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-50" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
+            </span>
+            Live scrolling · hover to pause
+          </div>
+        </div>
+      </div>
+
+      {/* Infinite scroll track */}
+      <div className="relative w-full">
+        {/* Edge fades */}
+        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 z-10 pointer-events-none bg-gradient-to-r from-slate-50 to-transparent" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 z-10 pointer-events-none bg-gradient-to-l from-slate-50 to-transparent" />
+
+        <div className="gallery-track" style={{ gap: "1.5rem", padding: "0.5rem 1.5rem 1.5rem" }}>
+          {loopItems.map(({ title, desc, category, image, location }, idx) => (
             <div
-              key={title}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200/60 group hover:shadow-xl transition-all duration-300"
+              key={idx}
+              style={{ width: "360px", flexShrink: 0 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200/70 group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 <img
                   src={image}
-                  alt={`${title} Before and After`}
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  alt={`${title} — Before and After`}
+                  className="w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-700"
                   loading="lazy"
                 />
-                <span className="absolute top-4 left-4 bg-navy text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">
+                {/* Dark gradient bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                {/* Category badge — top left */}
+                <span className="absolute top-3 left-3 bg-navy/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow">
                   {category}
                 </span>
-                
-                {/* Before & After Labels Overlay */}
+                {/* Location pin — top right */}
+                <span className="absolute top-3 right-3 flex items-center gap-1 bg-white/90 backdrop-blur-sm text-navy text-[10px] font-bold px-2.5 py-1 rounded-full shadow">
+                  <MapPin className="size-3 text-brand" />
+                  {location}
+                </span>
+                {/* Before / After labels — bottom */}
                 <div className="absolute bottom-3 left-3 right-3 flex justify-between pointer-events-none">
-                  <span className="bg-red-600/90 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow-sm">
+                  <span className="bg-red-500/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow">
                     Before
                   </span>
-                  <span className="bg-green-600/90 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow-sm">
+                  <span className="bg-emerald-500/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow">
                     After
                   </span>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="font-heading font-bold text-xl text-navy mb-2">{title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{desc}</p>
+              <div className="p-5">
+                <h3 className="font-heading font-bold text-base text-navy mb-1">{title}</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">{desc}</p>
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Gallery CTA */}
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-slate-200 pt-10">
+        <div>
+          <p className="font-heading font-extrabold text-xl sm:text-2xl text-navy">Liked what you see?</p>
+          <p className="text-slate-500 text-sm mt-1">Book a same-day pickup — Aaron handles every job personally.</p>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+          <a
+            href={PHONE_HREF}
+            id="gallery-cta-call"
+            className="inline-flex items-center gap-2 bg-brand text-white px-6 py-3.5 rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-brand/25"
+          >
+            <Phone className="size-4" />
+            Call Aaron Now
+          </a>
+          <a
+            href="#quote"
+            id="gallery-cta-quote"
+            className="inline-flex items-center gap-2 border border-slate-200 text-navy px-6 py-3.5 rounded-2xl font-bold hover:border-brand hover:text-brand transition-colors"
+          >
+            <ArrowRight className="size-4" />
+            Get a Free Quote
+          </a>
         </div>
       </div>
     </section>
@@ -582,82 +746,129 @@ function Gallery() {
 function YelpReview() {
   return (
     <section id="reviews" className="py-20 sm:py-24 bg-slate-50">
-      <div className="max-w-3xl mx-auto px-5 sm:px-6">
-        <div className="text-center mb-10">
-          <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
-            Straight from Yelp
-          </p>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl tracking-tight mb-4">
-            What Melissa said about her project
-          </h2>
-          <a
-            href="https://m.yelp.com/biz/come-in-handy-atlanta"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-brand bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm transition-all hover:scale-[1.02]"
-          >
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            Verify on Yelp.com
-            <ArrowUpRight className="size-3.5" />
-          </a>
-        </div>
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-        {/* Review card */}
-        <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
-          <div className="p-7 sm:p-9">
-            <div className="flex items-start gap-4">
-              <div className="size-12 rounded-full bg-gradient-to-br from-brand to-red-500 text-white grid place-items-center font-bold text-lg shrink-0">
-                M
+          {/* LEFT — review content */}
+          <div>
+            <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
+              Straight from Yelp
+            </p>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl tracking-tight mb-4">
+              What Melissa said about her project
+            </h2>
+            <a
+              href="https://m.yelp.com/biz/come-in-handy-atlanta"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-brand bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm transition-all hover:scale-[1.02] mb-8"
+            >
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              Verify on Yelp.com
+              <ArrowUpRight className="size-3.5" />
+            </a>
+
+            {/* Review card */}
+            <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden mb-6">
+              <div className="p-7 sm:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="size-12 rounded-full bg-gradient-to-br from-brand to-red-500 text-white grid place-items-center font-bold text-lg shrink-0">
+                    M
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between flex-wrap gap-2">
+                      <p className="font-bold text-navy">Melissa S.</p>
+                      <span className="text-xs text-slate-400">17 days ago</span>
+                    </div>
+                    <div className="flex gap-0.5 text-brand mt-1 mb-4">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star key={i} className="size-4 fill-brand" />
+                      ))}
+                    </div>
+                    <p className="text-slate-700 leading-relaxed text-[15px]">
+                      “Come in Handy did just that. I had a huge project and I wasn’t sure
+                      how I was going to get it done. I called a few companies but either
+                      they couldn’t fit me in or the quotes were ridiculous. Aaron picked
+                      up himself, walked me through everything, and his crew handled the
+                      whole job same day. Highly recommend.”
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="flex-1">
-                <div className="flex items-center justify-between flex-wrap gap-2">
-                  <p className="font-bold text-navy">Melissa S.</p>
-                  <span className="text-xs text-slate-400">17 days ago</span>
+
+              {/* Owner reply */}
+              <div className="bg-slate-50 border-t border-slate-200 p-7 sm:p-8">
+                <div className="flex items-start gap-4">
+                  <img
+                    src={aaronPortrait}
+                    alt="Aaron Johnson"
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                    className="size-12 rounded-full object-cover border-2 border-white shadow"
+                  />
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <p className="font-bold text-navy">Aaron J.</p>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-brand bg-brand/10 px-2 py-0.5 rounded-full">
+                        Business Owner
+                      </span>
+                    </div>
+                    <p className="text-slate-700 leading-relaxed text-[15px] mt-3 italic">
+                      “That truly means a lot, and we greatly appreciate you choosing us,
+                      as well as your awesome review. Thank you so much!”
+                    </p>
+                    <p className="mt-3 text-sm font-semibold text-slate-500">
+                      — Aaron Johnson, Come In Handy (Owner Operator)
+                    </p>
+                  </div>
                 </div>
-                <div className="flex gap-0.5 text-brand mt-1 mb-4">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-4 fill-brand" />
-                  ))}
-                </div>
-                <p className="text-slate-700 leading-relaxed text-[15px]">
-                  â€œCome in Handy did just that. I had a huge project and I wasn't sure
-                  how I was going to get it done. I called a few companies but either
-                  they couldn't fit me in or the quotes were ridiculous. Aaron picked
-                  up himself, walked me through everything, and his crew handled the
-                  whole job same day. Highly recommend.â€
-                </p>
               </div>
             </div>
+
+            {/* CTA call button */}
+            <a
+              href={PHONE_HREF}
+              id="yelp-section-cta"
+              className="inline-flex items-center gap-3 bg-brand text-white px-7 py-4 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
+            >
+              <Phone className="size-5" />
+              Call Aaron Now: 330-412-6268
+            </a>
           </div>
 
-          {/* Owner reply */}
-          <div className="bg-slate-50 border-t border-slate-200 p-7 sm:p-9">
-            <div className="flex items-start gap-4">
+          {/* RIGHT — house image */}
+          <div className="relative hidden lg:block">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src={aaronPortrait}
-                alt="Aaron Johnson"
-                width={48}
-                height={48}
+                src={atlantaHouse}
+                alt="Atlanta home served by Come In Handy"
+                className="w-full h-[600px] object-cover"
                 loading="lazy"
-                className="size-12 rounded-full object-cover border-2 border-white shadow"
               />
-              <div className="flex-1">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <p className="font-bold text-navy">Aaron J.</p>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-brand bg-brand/10 px-2 py-0.5 rounded-full">
-                    Business Owner
-                  </span>
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+              {/* Floating trust badge */}
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-xl">
+                <div className="flex items-center gap-4">
+                  <div className="size-12 rounded-xl bg-brand/10 grid place-items-center shrink-0">
+                    <Home className="size-6 text-brand" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-navy text-sm">Serving metro Atlanta homes</p>
+                    <p className="text-xs text-slate-500 mt-0.5">Same-day junk removal & cleaning — owner on every job</p>
+                  </div>
                 </div>
-                <p className="text-slate-700 leading-relaxed text-[15px] mt-3 italic">
-                  â€œThat truly means a lot, and we greatly appreciate you choosing us,
-                  as well as your awesome review. Thank you so much!â€
-                </p>
-                <p className="mt-3 text-sm font-semibold text-slate-500">
-                  â€” Aaron Johnson, Come In Handy (Owner Operator)
-                </p>
+                <div className="flex gap-1 mt-3">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="size-4 fill-brand text-brand" />
+                  ))}
+                  <span className="text-xs font-bold text-slate-600 ml-1">5.0 on Yelp</span>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -688,7 +899,7 @@ function OwnerSpotlight() {
           <p className="text-lg text-slate-600 leading-relaxed mb-6">
             I started Come In Handy because Atlanta deserved a junk removal and
             cleaning company you could actually count on. When you call, you get
-            <span className="text-navy font-semibold"> me</span> â€” not a call
+            <span className="text-navy font-semibold"> me</span> — not a call
             center, not a quote bot. I show up, I do the work right, and I treat
             your home like it's my own.
           </p>
@@ -704,7 +915,7 @@ function OwnerSpotlight() {
               <Phone className="size-4" />
               Call Aaron: 330-412-6268
             </a>
-            <span className="font-heading italic text-2xl text-slate-400">â€” Aaron J.</span>
+            <span className="font-heading italic text-2xl text-slate-400">— Aaron J.</span>
           </div>
         </div>
       </div>
@@ -725,7 +936,7 @@ function ServiceArea() {
             Serving all of metro Atlanta
           </h2>
           <p className="text-slate-600 mt-3 max-w-xl mx-auto">
-            Not sure if we cover your area? Just call â€” if it's in the metro, we'll be there.
+            Not sure if we cover your area? Just call — if it's in the metro, we'll be there.
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto">
@@ -737,6 +948,31 @@ function ServiceArea() {
               {a}
             </span>
           ))}
+        </div>
+
+        {/* ServiceArea CTA */}
+        <div className="mt-12 text-center">
+          <p className="text-slate-500 text-sm mb-5">
+            Your city not listed? Give us a call — if it's reachable, we're there.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href={PHONE_HREF}
+              id="service-area-cta-call"
+              className="inline-flex items-center justify-center gap-2 bg-navy text-white px-7 py-3.5 rounded-2xl font-bold hover:bg-brand transition-colors shadow-md"
+            >
+              <Phone className="size-4" />
+              Call Aaron: 330-412-6268
+            </a>
+            <a
+              href="#quote"
+              id="service-area-cta-quote"
+              className="inline-flex items-center justify-center gap-2 border border-slate-200 bg-white text-navy px-7 py-3.5 rounded-2xl font-bold hover:border-brand hover:text-brand transition-colors shadow-sm"
+            >
+              <ArrowRight className="size-4" />
+              Request a Free Quote
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -757,7 +993,7 @@ function QuoteSection() {
             Ready to reclaim your space?
           </h2>
           <p className="text-slate-300 text-lg leading-relaxed mb-10 max-w-md">
-            Send your details and Aaron will call you back personally â€” usually
+            Send your details and Aaron will call you back personally — usually
             within the hour. Or just call now for same-day priority service.
           </p>
 
@@ -772,7 +1008,7 @@ function QuoteSection() {
           <div className="space-y-4 text-slate-300">
             <div className="flex items-center gap-3">
               <Clock className="size-5 text-brand shrink-0" />
-              <span>Monâ€“Sat: 8:00 AM â€“ 7:00 PM</span>
+              <span>Mon“Sat: 8:00 AM “ 7:00 PM</span>
             </div>
             <div className="flex items-center gap-3">
               <Calendar className="size-5 text-brand shrink-0" />
@@ -895,7 +1131,7 @@ function Footer() {
         <div>
           <img
             src={logoImg}
-            alt="Come In Handy â€” Hauling & Cleaning"
+            alt="Come In Handy — Hauling & Cleaning"
             width={96}
             height={64}
             loading="lazy"
@@ -917,7 +1153,7 @@ function Footer() {
           >
             330-412-6268
           </a>
-          <p className="text-sm text-slate-600">Monâ€“Sat: 8:00 AM â€“ 7:00 PM</p>
+          <p className="text-sm text-slate-600">Mon“Sat: 8:00 AM “ 7:00 PM</p>
           <p className="text-sm text-slate-600">Atlanta, GA & metro area</p>
         </div>
         <div className="flex md:justify-end gap-3">
