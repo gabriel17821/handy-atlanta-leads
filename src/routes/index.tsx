@@ -156,8 +156,7 @@ function LightField({
         required={required}
         className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white transition-all"
       />
-    </div>
-  );
+    </div>  );
 }
 
 function Hero() {
@@ -165,8 +164,8 @@ function Hero() {
 
   return (
     <header id="top" className="pt-28 sm:pt-32 pb-16 sm:pb-20 px-5 sm:px-6">
-      <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-12 sm:gap-16">
-        <div className="flex flex-col items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider mb-6">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75" />
@@ -174,7 +173,7 @@ function Hero() {
             </span>
             Available Today in Atlanta
           </div>
-          <h1 className="font-heading font-extrabold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.92] tracking-tighter mb-8 max-w-3xl">
+          <h1 className="font-heading font-extrabold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.92] tracking-tighter mb-8">
             WE CLEAR
             <br />
             <span className="text-brand italic uppercase">THE JUNK</span>,
@@ -183,28 +182,28 @@ function Hero() {
             <br />
             THE PEACE.
           </h1>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mb-10 leading-relaxed mx-auto">
+          <p className="text-lg sm:text-xl text-slate-600 max-w-md mb-10 leading-relaxed">
             Professional hauling, junk removal, and move-out cleaning across
             metro Atlanta. Fast, affordable, and personal service from owner-operator{" "}
             <span className="text-navy font-semibold">Aaron Johnson</span>.
           </p>
-          <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
             >
               <Phone className="size-5" />
               Call Aaron Now
             </a>
             <a
               href="#hero-quote-form"
-              className="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 text-navy px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:border-navy transition-colors w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 text-navy px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:border-navy transition-colors"
             >
               Get Free Quote
               <ArrowRight className="size-5" />
             </a>
           </div>
-          <div className="flex items-center justify-center gap-3 mt-10">
+          <div className="flex items-center gap-3 mt-8">
             <img
               src={aaronPortrait}
               alt="Aaron Johnson, owner of Come In Handy Atlanta"
@@ -213,14 +212,14 @@ function Hero() {
               loading="lazy"
               className="size-12 rounded-full object-cover border-4 border-white shadow-md"
             />
-            <div className="text-left">
+            <div>
               <p className="text-sm font-bold">Owner Operated</p>
               <p className="text-xs text-slate-500">Talk to Aaron directly — no call centers.</p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 w-full max-w-xl mx-auto">
+        <div className="flex flex-col gap-6 w-full">
           {/* Quote Form Card */}
           <div id="hero-quote-form" className="bg-white ring-1 ring-slate-200 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden border border-slate-100 text-left">
             {/* Decorative background glow */}
@@ -284,7 +283,7 @@ function Hero() {
                     </div>
                   </div>
                   <div className="grid gap-1.5">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-505">
                       Tell Aaron about the job
                     </label>
                     <textarea
