@@ -92,11 +92,11 @@ function Index() {
       <Hero />
       <TrustStrip />
       <Services />
+      <Gallery />
       <FullServiceList />
       <HowItWorks />
       <YelpReview />
       <OwnerSpotlight />
-      <Gallery />
       <ServiceArea />
       <QuoteSection />
       <Footer />
@@ -123,6 +123,7 @@ function Nav() {
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
           <a href="#services" className="hover:text-navy transition-colors">Services</a>
+          <a href="#gallery" className="hover:text-navy transition-colors">Gallery</a>
           <a href="#reviews" className="hover:text-navy transition-colors">Reviews</a>
           <a href="#quote" className="hover:text-navy transition-colors">Get Quote</a>
         </div>
