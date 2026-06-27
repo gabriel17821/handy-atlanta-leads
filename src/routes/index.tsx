@@ -134,9 +134,11 @@ function Nav() {
 }
 
 function Hero() {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <header id="top" className="pt-28 sm:pt-32 pb-16 sm:pb-20 px-5 sm:px-6">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider mb-6">
             <span className="relative flex h-2 w-2">
@@ -168,7 +170,7 @@ function Hero() {
               Call Aaron Now
             </a>
             <a
-              href="#quote"
+              href="#hero-quote-form"
               className="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 text-navy px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:border-navy transition-colors"
             >
               Get Free Quote
@@ -191,32 +193,105 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy to-slate-900 p-8 sm:p-12 lg:p-16 shadow-2xl shadow-navy/20 min-h-[400px] lg:min-h-[500px] flex flex-col justify-between border border-slate-800">
-          {/* Decorative glowing gradient sphere */}
-          <div className="absolute -top-24 -right-24 size-48 rounded-full bg-brand/20 blur-3xl" />
-          <div className="absolute -bottom-24 -left-24 size-48 rounded-full bg-navy/40 blur-3xl" />
+        <div className="flex flex-col gap-6 w-full">
+          {/* Quote Form Card */}
+          <div id="hero-quote-form" className="bg-slate-900 ring-1 ring-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            {/* Decorative background glow */}
+            <div className="absolute -top-24 -right-24 size-48 rounded-full bg-brand/10 blur-3xl pointer-events-none" />
+            
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSubmitted(true);
+              }}
+              className="space-y-4 relative z-10"
+            >
+              <div className="mb-2">
+                <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-white">Get a Free Same-Day Quote</h3>
+                <p className="text-xs text-slate-400">Aaron will call you back personally in minutes.</p>
+              </div>
 
-          <div className="relative">
-            <span className="font-serif text-[10rem] text-brand opacity-20 absolute -top-16 -left-6 leading-none pointer-events-none">
-              “
-            </span>
-            <div className="flex gap-1 text-brand mb-6 mt-4 relative z-10">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="size-6 fill-brand text-brand" />
-              ))}
-            </div>
-            <blockquote className="relative z-10 font-heading text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-white leading-relaxed italic mb-8">
-              “I had a huge project and wasn't sure how I was going to get it done… Aaron came in handy and did just that.”
-            </blockquote>
+              {submitted ? (
+                <div className="text-center py-8">
+                  <div className="size-14 rounded-full bg-brand/20 grid place-items-center mx-auto mb-4 animate-bounce">
+                    <Check className="size-6 text-brand" />
+                  </div>
+                  <h4 className="font-heading font-bold text-lg text-white mb-2">Request Received!</h4>
+                  <p className="text-xs text-slate-400 mb-5">
+                    Aaron will reach out to you within the hour.
+                  </p>
+                  <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                    <p className="text-xs text-slate-400 mb-2">Need immediate service?</p>
+                    <a
+                      href={PHONE_HREF}
+                      className="inline-flex items-center justify-center gap-2 bg-brand text-white w-full py-3 rounded-xl font-bold text-sm hover:scale-[1.01] transition-transform"
+                    >
+                      <Phone className="size-4" />
+                      Call/Text Aaron Now
+                    </a>
+                  </div>
+                </div>
+              ) : (
+                <div className="grid gap-4">
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    <Field label="Name" name="name" placeholder="Your name" required />
+                    <Field label="Phone" name="phone" type="tel" placeholder="(404) 000-0000" required />
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    <Field label="Address or ZIP" name="zip" placeholder="Atlanta, GA" />
+                    <div className="grid gap-2">
+                      <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                        Service Needed
+                      </label>
+                      <select
+                        name="service"
+                        className="w-full rounded-xl bg-slate-800/80 px-4 py-3 text-sm text-white ring-1 ring-slate-700 focus:outline-none focus:ring-brand"
+                      >
+                        <option>Junk removal</option>
+                        <option>Property clean-out</option>
+                        <option>Furniture / appliance disposal</option>
+                        <option>Move-in / out cleaning</option>
+                        <option>Yard debris / landscaping waste</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="grid gap-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      Tell Aaron about the job
+                    </label>
+                    <textarea
+                      name="details"
+                      rows={2}
+                      placeholder="What needs to go? Roughly how much?"
+                      className="w-full rounded-xl bg-slate-800/80 px-4 py-3 text-sm text-white ring-1 ring-slate-700 focus:outline-none focus:ring-brand min-h-[70px]"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-brand text-white py-3.5 rounded-xl font-bold text-base hover:scale-[1.01] transition-transform shadow-lg shadow-brand/20"
+                  >
+                    Request Free Quote
+                    <ArrowRight className="size-4" />
+                  </button>
+                </div>
+              )}
+            </form>
           </div>
 
-          <div className="border-t border-slate-800 pt-6 flex flex-wrap items-center justify-between gap-4 relative z-10">
-            <div>
-              <p className="font-bold text-lg text-white">Melissa S.</p>
-              <p className="text-sm text-slate-400">Atlanta Resident</p>
+          {/* Testimonial Quote Bubble */}
+          <div className="bg-white/90 backdrop-blur-md ring-1 ring-slate-200/80 rounded-2xl p-4 sm:p-5 shadow-lg flex flex-col gap-2 border border-white/50">
+            <div className="flex gap-0.5 text-brand">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="size-3.5 fill-brand text-brand" />
+              ))}
             </div>
-            <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700/50">
-              <span className="text-xs font-semibold uppercase tracking-widest text-slate-300">Verified Yelp Review</span>
+            <p className="text-xs sm:text-sm italic text-slate-750 leading-relaxed font-medium">
+              “I had a huge project and wasn't sure how I was going to get it done… Aaron came in handy and did just that.”
+            </p>
+            <div className="flex items-center justify-between text-[11px] border-t border-slate-100 pt-2 mt-1">
+              <span className="font-bold text-navy">— Melissa S.</span>
+              <span className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Yelp</span>
             </div>
           </div>
         </div>
