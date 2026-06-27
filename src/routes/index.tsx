@@ -106,11 +106,15 @@ function Nav() {
     <nav className="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
-          <div className="size-8 bg-brand rounded-lg flex items-center justify-center">
-            <div className="size-4 bg-white rounded-sm rotate-45" />
-          </div>
-          <span className="font-heading text-lg sm:text-xl tracking-tight font-bold">
-            Come In Handy <span className="text-brand">ATL</span>
+          <img
+            src={logoAsset.url}
+            alt="Come In Handy — Hauling & Cleaning"
+            width={48}
+            height={48}
+            className="h-10 sm:h-12 w-auto"
+          />
+          <span className="hidden sm:inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-brand">
+            Atlanta
           </span>
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
