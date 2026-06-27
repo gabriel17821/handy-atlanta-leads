@@ -23,7 +23,6 @@ import {
   ArrowRight,
   Check,
 } from "lucide-react";
-import heroTruck from "../assets/hero-truck.jpg";
 import aaronPortrait from "../assets/aaron.jpg";
 import logoImg from "../assets/logo.png";
 
@@ -192,26 +191,32 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative">
-          <img
-            src={heroTruck}
-            alt="Come In Handy Atlanta junk removal truck parked at a home"
-            width={896}
-            height={1120}
-            className="w-full aspect-[4/5] object-cover rounded-[2rem] shadow-2xl shadow-navy/10"
-          />
-          <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-white p-5 sm:p-6 rounded-2xl shadow-xl border border-slate-100 max-w-[19rem]">
-            <div className="flex gap-0.5 text-brand mb-2">
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy to-slate-900 p-8 sm:p-12 lg:p-16 shadow-2xl shadow-navy/20 min-h-[400px] lg:min-h-[500px] flex flex-col justify-between border border-slate-800">
+          {/* Decorative glowing gradient sphere */}
+          <div className="absolute -top-24 -right-24 size-48 rounded-full bg-brand/20 blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 size-48 rounded-full bg-navy/40 blur-3xl" />
+
+          <div className="relative">
+            <span className="font-serif text-[10rem] text-brand opacity-20 absolute -top-16 -left-6 leading-none pointer-events-none">
+              “
+            </span>
+            <div className="flex gap-1 text-brand mb-6 mt-4 relative z-10">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="size-4 fill-brand" />
+                <Star key={i} className="size-6 fill-brand text-brand" />
               ))}
             </div>
-            <p className="text-sm italic text-slate-700 leading-relaxed">
+            <blockquote className="relative z-10 font-heading text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-white leading-relaxed italic mb-8">
               “I had a huge project and wasn't sure how I was going to get it done… Aaron came in handy and did just that.”
-            </p>
-            <div className="mt-3 flex items-center justify-between">
-              <span className="font-bold text-sm">— Melissa S.</span>
-              <span className="text-[10px] uppercase tracking-widest text-slate-400">Yelp</span>
+            </blockquote>
+          </div>
+
+          <div className="border-t border-slate-800 pt-6 flex flex-wrap items-center justify-between gap-4 relative z-10">
+            <div>
+              <p className="font-bold text-lg text-white">Melissa S.</p>
+              <p className="text-sm text-slate-400">Atlanta Resident</p>
+            </div>
+            <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700/50">
+              <span className="text-xs font-semibold uppercase tracking-widest text-slate-300">Verified Yelp Review</span>
             </div>
           </div>
         </div>
