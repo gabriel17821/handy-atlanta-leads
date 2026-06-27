@@ -187,20 +187,13 @@ function Hero() {
             metro Atlanta. Fast, affordable, and personal service from owner-operator{" "}
             <span className="text-navy font-semibold">Aaron Johnson</span>.
           </p>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
+              className="inline-flex items-center justify-center gap-3 bg-brand text-white px-8 py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 w-full sm:w-auto"
             >
               <Phone className="size-5" />
-              Call Aaron Now
-            </a>
-            <a
-              href="#hero-quote-form"
-              className="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 text-navy px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:border-navy transition-colors"
-            >
-              Get Free Quote
-              <ArrowRight className="size-5" />
+              Call Aaron Now: 330-412-6268
             </a>
           </div>
           <div className="flex items-center gap-3 mt-8">
