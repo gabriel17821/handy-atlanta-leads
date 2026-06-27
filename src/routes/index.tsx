@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Phone,
@@ -29,17 +29,18 @@ import logoImg from "../assets/logo.png";
 import garageCleanout from "../assets/garage-cleanout.png";
 import yardDebris from "../assets/yard-debris.png";
 import furnitureDisposal from "../assets/furniture-disposal.png";
+import melissaJob from "../assets/melissa-job.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Come In Handy Atlanta — Same-Day Junk Removal, Hauling & Cleaning" },
+      { title: "Come In Handy Atlanta â€” Same-Day Junk Removal, Hauling & Cleaning" },
       {
         name: "description",
         content:
           "Atlanta's owner-operated junk removal, hauling, and cleaning service. Same-day pickup for furniture, appliances, yard debris & property clean-outs. Call Aaron: 330-412-6268.",
       },
-      { property: "og:title", content: "Come In Handy Atlanta — Same-Day Junk Removal & Hauling" },
+      { property: "og:title", content: "Come In Handy Atlanta â€” Same-Day Junk Removal & Hauling" },
       {
         property: "og:description",
         content:
@@ -112,7 +113,7 @@ function Nav() {
         <a href="#top" className="flex items-center gap-2">
           <img
             src={logoImg}
-            alt="Come In Handy — Hauling & Cleaning"
+            alt="Come In Handy â€” Hauling & Cleaning"
             width={72}
             height={48}
             className="h-12 sm:h-16 w-auto object-contain"
@@ -213,7 +214,7 @@ function Hero() {
             />
             <div>
               <p className="text-sm font-bold">Owner Operated</p>
-              <p className="text-xs text-slate-500">Talk to Aaron directly — no call centers.</p>
+              <p className="text-xs text-slate-500">Talk to Aaron directly â€” no call centers.</p>
             </div>
           </div>
         </div>
@@ -312,10 +313,10 @@ function Hero() {
               ))}
             </div>
             <p className="text-xs sm:text-sm italic text-slate-750 leading-relaxed font-medium">
-              “I had a huge project and wasn't sure how I was going to get it done… Aaron came in handy and did just that.”
+              â€œI had a huge project and wasn't sure how I was going to get it doneâ€¦ Aaron came in handy and did just that.â€
             </p>
             <div className="flex items-center justify-between text-[11px] border-t border-brand/10 pt-2 mt-1">
-              <span className="font-bold text-navy">— Melissa S.</span>
+              <span className="font-bold text-navy">â€” Melissa S.</span>
               <span className="text-[10px] uppercase tracking-wider text-brand font-semibold">Yelp</span>
             </div>
           </div>
@@ -396,7 +397,7 @@ function Services() {
               HANDY SERVICES
             </h2>
             <p className="text-slate-400 mt-4 max-w-md">
-              Everything from a single mattress haul-away to full-scale property cleanouts —
+              Everything from a single mattress haul-away to full-scale property cleanouts â€”
               under one phone number.
             </p>
           </div>
@@ -462,7 +463,7 @@ function HowItWorks() {
     {
       n: "01",
       title: "Call or text Aaron",
-      desc: "One quick call to 330-412-6268. Send a photo of what needs to go — get a no-pressure ballpark on the spot.",
+      desc: "One quick call to 330-412-6268. Send a photo of what needs to go â€” get a no-pressure ballpark on the spot.",
     },
     {
       n: "02",
@@ -472,7 +473,7 @@ function HowItWorks() {
     {
       n: "03",
       title: "We haul, you breathe",
-      desc: "We do all the lifting, loading, and disposal. You point — we take it from there.",
+      desc: "We do all the lifting, loading, and disposal. You point â€” we take it from there.",
     },
   ];
   return (
@@ -619,11 +620,11 @@ function YelpReview() {
                   ))}
                 </div>
                 <p className="text-slate-700 leading-relaxed text-[15px]">
-                  “Come in Handy did just that. I had a huge project and I wasn't sure
+                  â€œCome in Handy did just that. I had a huge project and I wasn't sure
                   how I was going to get it done. I called a few companies but either
                   they couldn't fit me in or the quotes were ridiculous. Aaron picked
                   up himself, walked me through everything, and his crew handled the
-                  whole job same day. Highly recommend.”
+                  whole job same day. Highly recommend.â€
                 </p>
               </div>
             </div>
@@ -648,11 +649,11 @@ function YelpReview() {
                   </span>
                 </div>
                 <p className="text-slate-700 leading-relaxed text-[15px] mt-3 italic">
-                  “That truly means a lot, and we greatly appreciate you choosing us,
-                  as well as your awesome review. Thank you so much!”
+                  â€œThat truly means a lot, and we greatly appreciate you choosing us,
+                  as well as your awesome review. Thank you so much!â€
                 </p>
                 <p className="mt-3 text-sm font-semibold text-slate-500">
-                  — Aaron Johnson, Come In Handy (Owner Operator)
+                  â€” Aaron Johnson, Come In Handy (Owner Operator)
                 </p>
               </div>
             </div>
@@ -687,7 +688,7 @@ function OwnerSpotlight() {
           <p className="text-lg text-slate-600 leading-relaxed mb-6">
             I started Come In Handy because Atlanta deserved a junk removal and
             cleaning company you could actually count on. When you call, you get
-            <span className="text-navy font-semibold"> me</span> — not a call
+            <span className="text-navy font-semibold"> me</span> â€” not a call
             center, not a quote bot. I show up, I do the work right, and I treat
             your home like it's my own.
           </p>
@@ -703,7 +704,7 @@ function OwnerSpotlight() {
               <Phone className="size-4" />
               Call Aaron: 330-412-6268
             </a>
-            <span className="font-heading italic text-2xl text-slate-400">— Aaron J.</span>
+            <span className="font-heading italic text-2xl text-slate-400">â€” Aaron J.</span>
           </div>
         </div>
       </div>
@@ -724,7 +725,7 @@ function ServiceArea() {
             Serving all of metro Atlanta
           </h2>
           <p className="text-slate-600 mt-3 max-w-xl mx-auto">
-            Not sure if we cover your area? Just call — if it's in the metro, we'll be there.
+            Not sure if we cover your area? Just call â€” if it's in the metro, we'll be there.
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto">
@@ -756,7 +757,7 @@ function QuoteSection() {
             Ready to reclaim your space?
           </h2>
           <p className="text-slate-300 text-lg leading-relaxed mb-10 max-w-md">
-            Send your details and Aaron will call you back personally — usually
+            Send your details and Aaron will call you back personally â€” usually
             within the hour. Or just call now for same-day priority service.
           </p>
 
@@ -771,7 +772,7 @@ function QuoteSection() {
           <div className="space-y-4 text-slate-300">
             <div className="flex items-center gap-3">
               <Clock className="size-5 text-brand shrink-0" />
-              <span>Mon–Sat: 8:00 AM – 7:00 PM</span>
+              <span>Monâ€“Sat: 8:00 AM â€“ 7:00 PM</span>
             </div>
             <div className="flex items-center gap-3">
               <Calendar className="size-5 text-brand shrink-0" />
@@ -894,7 +895,7 @@ function Footer() {
         <div>
           <img
             src={logoImg}
-            alt="Come In Handy — Hauling & Cleaning"
+            alt="Come In Handy â€” Hauling & Cleaning"
             width={96}
             height={64}
             loading="lazy"
@@ -916,7 +917,7 @@ function Footer() {
           >
             330-412-6268
           </a>
-          <p className="text-sm text-slate-600">Mon–Sat: 8:00 AM – 7:00 PM</p>
+          <p className="text-sm text-slate-600">Monâ€“Sat: 8:00 AM â€“ 7:00 PM</p>
           <p className="text-sm text-slate-600">Atlanta, GA & metro area</p>
         </div>
         <div className="flex md:justify-end gap-3">
@@ -931,7 +932,7 @@ function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-5 sm:px-6 mt-10 pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between">
-        <span>© {new Date().getFullYear()} Come In Handy Atlanta. Owner Operated by Aaron Johnson.</span>
+        <span>Â© {new Date().getFullYear()} Come In Handy Atlanta. Owner Operated by Aaron Johnson.</span>
         <span>Licensed & Insured</span>
       </div>
     </footer>
@@ -951,3 +952,4 @@ function MobileCallBar() {
     </div>
   );
 }
+
