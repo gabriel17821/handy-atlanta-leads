@@ -90,11 +90,12 @@ function Index() {
       <Nav />
       <Hero />
       <TrustStrip />
-      <Gallery />
+      <Services />
       <FullServiceList />
       <HowItWorks />
       <YelpReview />
       <OwnerSpotlight />
+      <Gallery />
       <ServiceArea />
       <QuoteSection />
       <Footer />
@@ -344,7 +345,87 @@ function TrustStrip() {
   );
 }
 
+function Services() {
+  const cards = [
+    {
+      icon: Truck,
+      title: "Junk Removal & Hauling",
+      desc: "Furniture, appliances, mattresses, debris. We handle the heavy lifting and proper disposal.",
+      items: [
+        "Same-day trash & junk pickup",
+        "Furniture & appliance removal",
+        "Construction debris",
+        "Tire & mattress disposal",
+      ],
+    },
+    {
+      icon: Boxes,
+      title: "Property Clean-Outs",
+      desc: "Complete evacuation for landlords, realtors, estates, and tenants moving on.",
+      items: [
+        "Move-in / move-out clean-outs",
+        "Foreclosure & estate cleanouts",
+        "Yard & landscaping waste",
+        "Christmas tree disposal",
+      ],
+    },
+    {
+      icon: Sparkles,
+      title: "Pro Cleaning",
+      desc: "Deep cleaning that leaves the space spotless and ready for the next chapter.",
+      items: [
+        "Move-in / move-out cleaning",
+        "Regular home cleaning",
+        "Post-construction cleanup",
+        "Recycling sorting & pickup",
+      ],
+    },
+  ];
 
+  return (
+    <section id="services" className="py-20 sm:py-24 bg-navy text-white">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+          <div>
+            <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
+              What we do
+            </p>
+            <h2 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight">
+              HANDY SERVICES
+            </h2>
+            <p className="text-slate-400 mt-4 max-w-md">
+              Everything from a single mattress haul-away to full-scale property cleanouts —
+              under one phone number.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-px bg-slate-800 border border-slate-800 rounded-3xl overflow-hidden">
+          {cards.map(({ icon: Icon, title, desc, items }) => (
+            <div
+              key={title}
+              className="bg-navy p-8 lg:p-10 hover:bg-slate-900 transition-colors group"
+            >
+              <div className="size-12 bg-brand/15 rounded-xl mb-6 flex items-center justify-center group-hover:bg-brand transition-colors">
+                <Icon className="size-6 text-brand group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-2xl font-heading font-bold mb-3">{title}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-6">{desc}</p>
+              <ul className="space-y-2 text-sm font-medium text-slate-200">
+                {items.map((it) => (
+                  <li key={it} className="flex items-start gap-2">
+                    <Check className="size-4 text-brand mt-0.5 shrink-0" />
+                    {it}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function FullServiceList() {
   return (
@@ -442,17 +523,17 @@ function Gallery() {
   ];
 
   return (
-    <section id="services" className="py-20 sm:py-24 bg-navy text-white border-b border-slate-800">
+    <section id="gallery" className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-5 sm:px-6">
         <div className="text-center mb-14">
           <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
-            What we do
+            Our Work
           </p>
-          <h2 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight">
-            HANDY SERVICES
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+            Before & After Gallery
           </h2>
-          <p className="text-slate-300 mt-4 max-w-xl mx-auto leading-relaxed">
-            Before & after results from junk removal, property clean-outs, and hauling jobs in Atlanta.
+          <p className="text-slate-600 mt-4 max-w-xl mx-auto leading-relaxed">
+            See the actual results of Aaron's work across Atlanta. Move-out cleanouts, yard waste hauling, and same-day junk clearing.
           </p>
         </div>
 
@@ -460,7 +541,7 @@ function Gallery() {
           {items.map(({ title, desc, category, image }) => (
             <div
               key={title}
-              className="bg-white text-navy rounded-2xl overflow-hidden shadow-lg border border-slate-100 group hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200/60 group hover:shadow-xl transition-all duration-300"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
@@ -469,7 +550,7 @@ function Gallery() {
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                   loading="lazy"
                 />
-                <span className="absolute top-4 left-4 bg-brand text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">
+                <span className="absolute top-4 left-4 bg-navy text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">
                   {category}
                 </span>
                 
