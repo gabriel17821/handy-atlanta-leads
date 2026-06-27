@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 import heroTruck from "../assets/hero-truck.jpg";
 import aaronPortrait from "../assets/aaron.jpg";
-import logoImg from "../assets/logo.jpg";
+import logoImg from "../assets/logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -109,9 +109,9 @@ function Nav() {
           <img
             src={logoImg}
             alt="Come In Handy — Hauling & Cleaning"
-            width={48}
+            width={72}
             height={48}
-            className="h-10 sm:h-12 w-auto"
+            className="h-12 sm:h-16 w-auto object-contain"
           />
           <span className="hidden sm:inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-brand">
             Atlanta
@@ -704,10 +704,10 @@ function Footer() {
           <img
             src={logoImg}
             alt="Come In Handy — Hauling & Cleaning"
-            width={64}
+            width={96}
             height={64}
             loading="lazy"
-            className="h-16 w-auto mb-4"
+            className="h-20 sm:h-24 w-auto mb-4 object-contain"
           />
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand mb-3">
             Atlanta, GA
