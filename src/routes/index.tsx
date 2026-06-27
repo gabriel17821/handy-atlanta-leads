@@ -23,8 +23,8 @@ import {
   ArrowRight,
   ArrowUpRight,
   Check,
+  User,
 } from "lucide-react";
-import aaronPortrait from "../assets/aaron.jpg";
 import logoImg from "../assets/logo.png";
 import garageCleanout from "../assets/garage-cleanout.png";
 import yardDebris from "../assets/yard-debris.png";
@@ -208,14 +208,9 @@ function Hero() {
             </a>
           </div>
           <div className="flex items-center gap-3 mt-8">
-            <img
-              src={aaronPortrait}
-              alt="Aaron Johnson, owner of Come In Handy Atlanta"
-              width={48}
-              height={48}
-              loading="lazy"
-              className="size-12 rounded-full object-cover border-4 border-white shadow-md"
-            />
+            <div className="size-12 rounded-full bg-brand/10 border-4 border-white shadow-md grid place-items-center shrink-0">
+              <User className="size-6 text-brand" />
+            </div>
             <div>
               <p className="text-sm font-bold">Owner Operated</p>
               <p className="text-xs text-slate-500">Talk to Aaron directly — no call centers.</p>
@@ -799,14 +794,9 @@ function YelpReview() {
               {/* Owner reply */}
               <div className="bg-slate-50 border-t border-slate-200 p-7 sm:p-8">
                 <div className="flex items-start gap-4">
-                  <img
-                    src={aaronPortrait}
-                    alt="Aaron Johnson"
-                    width={48}
-                    height={48}
-                    loading="lazy"
-                    className="size-12 rounded-full object-cover border-2 border-white shadow"
-                  />
+                  <div className="size-12 rounded-full bg-brand/10 border-2 border-white shadow grid place-items-center shrink-0">
+                    <User className="size-6 text-brand" />
+                  </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 flex-wrap">
                       <p className="font-bold text-navy">Aaron J.</p>
@@ -880,14 +870,10 @@ function OwnerSpotlight() {
     <section className="py-20 sm:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 grid lg:grid-cols-5 gap-12 items-center">
         <div className="lg:col-span-2">
-          <img
-            src={aaronPortrait}
-            alt="Aaron Johnson, owner-operator of Come In Handy Atlanta"
-            width={512}
-            height={512}
-            loading="lazy"
-            className="w-full max-w-sm mx-auto aspect-square object-cover rounded-3xl shadow-xl"
-          />
+          <div className="w-full max-w-sm mx-auto aspect-square bg-gradient-to-br from-brand/5 to-brand/10 rounded-3xl shadow-xl flex flex-col items-center justify-center border border-brand/10 p-8">
+            <User className="size-24 text-brand/35" />
+            <span className="text-sm font-semibold text-slate-400 mt-4 uppercase tracking-wider">Aaron Johnson</span>
+          </div>
         </div>
         <div className="lg:col-span-3">
           <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
@@ -1126,49 +1112,87 @@ function Field({
 
 function Footer() {
   return (
-    <footer className="bg-slate-100 py-12 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 grid md:grid-cols-3 gap-10 items-start">
-        <div>
+    <footer className="bg-slate-100 py-16 border-t border-slate-200">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
+        {/* Column 1: Logo & Description */}
+        <div className="space-y-4">
           <img
             src={logoImg}
             alt="Come In Handy — Hauling & Cleaning"
             width={96}
             height={64}
             loading="lazy"
-            className="h-20 sm:h-24 w-auto mb-4 object-contain"
+            className="h-16 w-auto object-contain"
           />
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand mb-3">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand">
             Atlanta, GA
           </p>
-          <p className="text-sm text-slate-600 max-w-xs leading-relaxed">
+          <p className="text-sm text-slate-600 leading-relaxed">
             Owner-operated junk removal, hauling, and cleaning across the
             Atlanta metro area. Run personally by Aaron Johnson.
           </p>
+          <div className="flex gap-2 pt-2">
+            <div className="bg-white px-3 py-2 rounded-xl shadow-sm border border-slate-200 text-center shrink-0">
+              <span className="block text-lg font-bold text-navy leading-none">5.0</span>
+              <span className="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Yelp Rating</span>
+            </div>
+            <div className="bg-white px-3 py-2 rounded-xl shadow-sm border border-slate-200 text-center shrink-0">
+              <span className="block text-lg font-bold text-navy leading-none">Same-Day</span>
+              <span className="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Service</span>
+            </div>
+          </div>
         </div>
+
+        {/* Column 2: Quick Links */}
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4">Contact</p>
+          <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Quick Links</h4>
+          <ul className="space-y-2.5 text-sm text-slate-600 font-medium">
+            <li><a href="#services" className="hover:text-brand transition-colors">Our Services</a></li>
+            <li><a href="#gallery" className="hover:text-brand transition-colors">Before & Afters</a></li>
+            <li><a href="#reviews" className="hover:text-brand transition-colors">Client Reviews</a></li>
+            <li><a href="#quote" className="hover:text-brand transition-colors">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        {/* Column 3: Services */}
+        <div>
+          <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Our Services</h4>
+          <ul className="space-y-2 text-sm text-slate-600">
+            <li>Junk Removal & Hauling</li>
+            <li>Appliance Recycling</li>
+            <li>Furniture Disposal</li>
+            <li>Estate & House Cleanouts</li>
+            <li>Yard Debris Removal</li>
+            <li>Mattress Disposal</li>
+          </ul>
+        </div>
+
+        {/* Column 4: Contact Info */}
+        <div>
+          <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Contact Info</h4>
           <a
             href={PHONE_HREF}
-            className="block font-heading text-2xl font-bold tracking-tight hover:text-brand transition-colors mb-2"
+            className="block font-heading text-2xl font-bold tracking-tight text-navy hover:text-brand transition-colors mb-3"
           >
             330-412-6268
           </a>
-          <p className="text-sm text-slate-600">Mon“Sat: 8:00 AM “ 7:00 PM</p>
-          <p className="text-sm text-slate-600">Atlanta, GA & metro area</p>
-        </div>
-        <div className="flex md:justify-end gap-3">
-          <div className="bg-white px-5 py-4 rounded-xl shadow-sm border border-slate-200 text-center">
-            <span className="block text-2xl font-bold text-navy">5.0</span>
-            <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Yelp Rating</span>
-          </div>
-          <div className="bg-white px-5 py-4 rounded-xl shadow-sm border border-slate-200 text-center">
-            <span className="block text-2xl font-bold text-navy">Same-Day</span>
-            <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Service</span>
+          <div className="space-y-2 text-sm text-slate-600">
+            <p>
+              <strong>Hours:</strong> Mon–Sat: 8:00 AM – 7:00 PM
+            </p>
+            <p>
+              <strong>Service Area:</strong> Atlanta, GA & metro area
+            </p>
+            <p>
+              <strong>Owner:</strong> Aaron Johnson
+            </p>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 mt-10 pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between">
-        <span>Â© {new Date().getFullYear()} Come In Handy Atlanta. Owner Operated by Aaron Johnson.</span>
+      
+      {/* Footer Bottom */}
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 mt-12 pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between">
+        <span>© {new Date().getFullYear()} Come In Handy Atlanta. Owner Operated by Aaron Johnson.</span>
         <span>Licensed & Insured</span>
       </div>
     </footer>
