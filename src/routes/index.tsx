@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 import heroTruck from "../assets/hero-truck.jpg";
 import aaronPortrait from "../assets/aaron.jpg";
-import logoAsset from "../assets/logo.png.asset.json";
+import logoImg from "../assets/logo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -107,7 +107,7 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <img
-            src={logoAsset.url}
+            src={logoImg}
             alt="Come In Handy — Hauling & Cleaning"
             width={48}
             height={48}
@@ -702,7 +702,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 grid md:grid-cols-3 gap-10 items-start">
         <div>
           <img
-            src={logoAsset.url}
+            src={logoImg}
             alt="Come In Handy — Hauling & Cleaning"
             width={64}
             height={64}
