@@ -21,6 +21,7 @@ import {
   MapPin,
   Star,
   ArrowRight,
+  ArrowUpRight,
   Check,
 } from "lucide-react";
 import aaronPortrait from "../assets/aaron.jpg";
