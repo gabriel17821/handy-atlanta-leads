@@ -105,7 +105,6 @@ function Index() {
       <ServiceArea />
       <QuoteSection />
       <Footer />
-      <MobileCallBar />
     </div>
   );
 }
@@ -1215,17 +1214,5 @@ function Footer() {
   );
 }
 
-function MobileCallBar() {
-  return (
-    <div className="fixed bottom-0 inset-x-0 z-50 p-3 sm:hidden pointer-events-none">
-      <a
-        href={PHONE_HREF}
-        className="pointer-events-auto flex h-14 w-full items-center justify-center gap-3 rounded-2xl bg-brand text-white font-bold text-base shadow-2xl shadow-brand/40 ring-4 ring-white"
-      >
-        <Phone className="size-5" />
-        Call Aaron: 330-412-6268
-      </a>
-    </div>
-  );
-}
+
 
