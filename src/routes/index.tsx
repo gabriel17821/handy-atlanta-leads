@@ -701,14 +701,17 @@ function Footer() {
     <footer className="bg-slate-100 py-12 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 grid md:grid-cols-3 gap-10 items-start">
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="size-8 bg-brand rounded-lg flex items-center justify-center">
-              <div className="size-4 bg-white rounded-sm rotate-45" />
-            </div>
-            <span className="font-heading font-bold text-xl tracking-tight">
-              Come In Handy <span className="text-brand">ATL</span>
-            </span>
-          </div>
+          <img
+            src={logoAsset.url}
+            alt="Come In Handy — Hauling & Cleaning"
+            width={64}
+            height={64}
+            loading="lazy"
+            className="h-16 w-auto mb-4"
+          />
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand mb-3">
+            Atlanta, GA
+          </p>
           <p className="text-sm text-slate-600 max-w-xs leading-relaxed">
             Owner-operated junk removal, hauling, and cleaning across the
             Atlanta metro area. Run personally by Aaron Johnson.
