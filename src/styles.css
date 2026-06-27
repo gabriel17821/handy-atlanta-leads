@@ -152,3 +152,24 @@
     color: var(--color-foreground);
   }
 }
+
+/* Horizontal Scrolling Ticker / Marquee */
+@keyframes ticker-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-ticker {
+  animation: ticker-scroll 25s linear infinite;
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+

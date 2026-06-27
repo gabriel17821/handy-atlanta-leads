@@ -113,7 +113,7 @@ function Index() {
 function Nav() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <img
             src={logoImg}
@@ -174,17 +174,17 @@ function Hero() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <header id="top" className="pt-28 sm:pt-32 pb-16 sm:pb-20 px-5 sm:px-6">
+    <header id="top" className="pt-24 sm:pt-32 pb-10 sm:pb-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider mb-5">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
             </span>
             Available Today in Atlanta
           </div>
-          <h1 className="font-heading font-extrabold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.92] tracking-tighter mb-8">
+          <h1 className="font-heading font-extrabold text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.92] tracking-tighter mb-6">
             WE CLEAR
             <br />
             <span className="text-brand italic uppercase">THE JUNK</span>,
@@ -193,32 +193,38 @@ function Hero() {
             <br />
             THE PEACE.
           </h1>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-md mb-10 leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-md mb-6 sm:mb-10 leading-relaxed">
             Professional hauling, junk removal, and move-out cleaning across
             metro Atlanta. Fast, affordable, and personal service from owner-operator{" "}
             <span className="text-navy font-semibold">Aaron Johnson</span>.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center justify-center gap-3 bg-brand text-white px-8 py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-3 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 w-full sm:w-auto"
             >
               <Phone className="size-5" />
-              Call Aaron Now: 330-412-6268
+              Call Aaron: 330-412-6268
+            </a>
+            <a
+              href="#quote"
+              className="inline-flex items-center justify-center gap-3 bg-white text-navy border border-slate-200 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:bg-slate-50 transition-colors w-full sm:w-auto lg:hidden"
+            >
+              Get Free Quote
             </a>
           </div>
-          <div className="flex items-center gap-3 mt-8">
-            <div className="size-12 rounded-full bg-brand/10 border-4 border-white shadow-md grid place-items-center shrink-0">
-              <User className="size-6 text-brand" />
+          <div className="flex items-center gap-3 mt-6 sm:mt-8">
+            <div className="size-10 sm:size-12 rounded-full bg-brand/10 border-4 border-white shadow-md grid place-items-center shrink-0">
+              <User className="size-5 sm:size-6 text-brand" />
             </div>
             <div>
-              <p className="text-sm font-bold">Owner Operated</p>
-              <p className="text-xs text-slate-500">Talk to Aaron directly — no call centers.</p>
+              <p className="text-xs sm:text-sm font-bold">Owner Operated</p>
+              <p className="text-[10px] sm:text-xs text-slate-500">Talk to Aaron directly — no call centers.</p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 w-full">
+        <div className="hidden lg:flex flex-col gap-6 w-full">
           {/* Quote Form Card */}
           <div id="hero-quote-form" className="bg-white ring-1 ring-slate-200 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden border border-slate-100 text-left">
             {/* Decorative background glow */}
@@ -333,15 +339,25 @@ function TrustStrip() {
     { icon: MapPin, label: "Atlanta Metro" },
     { icon: Truck, label: "Owner-Operated" },
   ];
+  
+  // Duplicate items to ensure seamless loop
+  const duplicatedItems = [...items, ...items, ...items, ...items];
+
   return (
-    <section className="border-y border-slate-200 bg-white py-6">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-        {items.map(({ icon: Icon, label }) => (
-          <div key={label} className="flex items-center justify-center gap-2 text-slate-600">
-            <Icon className="size-4 text-brand" />
-            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide">{label}</span>
-          </div>
-        ))}
+    <section className="border-y border-slate-200 bg-white py-4 overflow-hidden select-none">
+      <div className="relative w-full">
+        {/* Subtle gradients at edges to fade content in and out */}
+        <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none bg-gradient-to-r from-white via-white/80 to-transparent" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none bg-gradient-to-l from-white via-white/80 to-transparent" />
+
+        <div className="ticker-track animate-ticker flex gap-16 items-center">
+          {duplicatedItems.map(({ icon: Icon, label }, idx) => (
+            <div key={idx} className="flex items-center gap-3 text-slate-600 shrink-0">
+              <Icon className="size-4 text-brand" />
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-wider">{label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -385,8 +401,8 @@ function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 sm:py-24 bg-navy text-white">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6">
+    <section id="services" className="py-12 sm:py-24 bg-navy text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>
             <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
@@ -451,36 +467,36 @@ function Services() {
 
 function FullServiceList() {
   return (
-    <section className="py-20 sm:py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6">
-        <div className="text-center mb-12">
-          <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
+    <section className="py-12 sm:py-24 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <p className="text-brand text-xs font-bold uppercase tracking-widest mb-2 sm:mb-3">
             If it needs to go, we'll take it
           </p>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+          <h2 className="font-heading font-extrabold text-2xl xs:text-3xl sm:text-4xl lg:text-5xl tracking-tight">
             Everything we haul & handle
           </h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
           {allServices.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl px-4 py-3 hover:border-brand hover:shadow-md transition-all"
+              className="flex items-center gap-2 sm:gap-3 bg-white border border-slate-200 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 hover:border-brand hover:shadow-md transition-all"
             >
-              <Icon className="size-5 text-brand shrink-0" />
-              <span className="text-sm font-semibold text-navy">{label}</span>
+              <Icon className="size-4 sm:size-5 text-brand shrink-0" />
+              <span className="text-xs sm:text-sm font-semibold text-navy leading-tight">{label}</span>
             </div>
           ))}
         </div>
         
         {/* FullServiceList CTA */}
-        <div className="mt-12 text-center">
+        <div className="mt-10 sm:mt-12 text-center">
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-brand/20"
+            className="inline-flex items-center gap-2 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-brand/20 text-sm sm:text-base w-full sm:w-auto justify-center"
           >
             <Phone className="size-4" />
-            Still not sure? Call Aaron: 330-412-6268
+            <span>Still not sure? Call Aaron: 330-412-6268</span>
           </a>
         </div>
       </div>
@@ -507,8 +523,8 @@ function HowItWorks() {
     },
   ];
   return (
-    <section className="py-20 sm:py-24 bg-white border-y border-slate-200">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6">
+    <section className="py-12 sm:py-24 bg-white border-y border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14">
           <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
             How it works
@@ -530,7 +546,7 @@ function HowItWorks() {
         </div>
 
         {/* HowItWorks CTA — natural next step after the 3 steps */}
-        <div className="mt-16 bg-slate-50 rounded-3xl border border-slate-200 p-8 sm:p-10 text-center">
+        <div className="mt-10 sm:mt-16 bg-slate-50 rounded-3xl border border-slate-200 p-6 sm:p-10 text-center">
           <div className="inline-flex items-center gap-2 bg-brand/10 text-brand text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75" />
@@ -618,7 +634,7 @@ function Gallery() {
   const loopItems = [...items, ...items];
 
   return (
-    <section id="gallery" className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200 overflow-hidden">
+    <section id="gallery" className="py-12 sm:py-24 bg-slate-50 border-b border-slate-200 overflow-hidden">
       <style>{`
         @keyframes gallery-scroll {
           0%   { transform: translateX(0); }
@@ -636,7 +652,7 @@ function Gallery() {
       `}</style>
 
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-12">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
             <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
@@ -710,7 +726,7 @@ function Gallery() {
       </div>
 
       {/* Gallery CTA */}
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-slate-200 pt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-slate-200 pt-10">
         <div>
           <p className="font-heading font-extrabold text-xl sm:text-2xl text-navy">Liked what you see?</p>
           <p className="text-slate-500 text-sm mt-1">Book a same-day pickup — Aaron handles every job personally.</p>
@@ -740,8 +756,8 @@ function Gallery() {
 
 function YelpReview() {
   return (
-    <section id="reviews" className="py-20 sm:py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6">
+    <section id="reviews" className="py-12 sm:py-24 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* LEFT — review content */}
@@ -867,41 +883,41 @@ function YelpReview() {
 
 function OwnerSpotlight() {
   return (
-    <section className="py-20 sm:py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-5 sm:px-6 grid lg:grid-cols-5 gap-12 items-center">
-        <div className="lg:col-span-2">
-          <div className="w-full max-w-sm mx-auto aspect-square bg-gradient-to-br from-brand/5 to-brand/10 rounded-3xl shadow-xl flex flex-col items-center justify-center border border-brand/10 p-8">
-            <User className="size-24 text-brand/35" />
-            <span className="text-sm font-semibold text-slate-400 mt-4 uppercase tracking-wider">Aaron Johnson</span>
+    <section className="py-12 sm:py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-5 gap-6 lg:gap-12 items-center">
+        <div className="lg:col-span-2 flex justify-center">
+          <div className="size-32 sm:size-48 lg:w-full lg:max-w-sm lg:aspect-square bg-gradient-to-br from-brand/5 to-brand/10 rounded-full lg:rounded-3xl shadow-xl flex flex-col items-center justify-center border border-brand/10 p-4 sm:p-8">
+            <User className="size-12 sm:size-16 lg:size-24 text-brand/35" />
+            <span className="hidden lg:inline-block text-sm font-semibold text-slate-400 mt-4 uppercase tracking-wider">Aaron Johnson</span>
           </div>
         </div>
-        <div className="lg:col-span-3">
-          <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
+        <div className="lg:col-span-3 text-left lg:text-left">
+          <p className="text-brand text-xs font-bold uppercase tracking-widest mb-2">
             Meet the owner
           </p>
-          <h2 className="font-heading font-extrabold text-4xl sm:text-5xl tracking-tight mb-6">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-4">
             Hi, I'm Aaron.
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed mb-6">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-4 sm:mb-6">
             I started Come In Handy because Atlanta deserved a junk removal and
             cleaning company you could actually count on. When you call, you get
             <span className="text-navy font-semibold"> me</span> — not a call
             center, not a quote bot. I show up, I do the work right, and I treat
             your home like it's my own.
           </p>
-          <p className="text-lg text-slate-600 leading-relaxed mb-8">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6 sm:mb-8">
             Whether it's one couch or a full property clean-out, you'll get a
             straight price and same-day service whenever I can swing it.
           </p>
           <div className="flex items-center gap-4 flex-wrap">
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center gap-2 bg-navy text-white px-6 py-3 rounded-2xl font-bold hover:bg-brand transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-navy text-white px-6 py-3.5 rounded-2xl font-bold hover:bg-brand transition-colors w-full sm:w-auto"
             >
               <Phone className="size-4" />
               Call Aaron: 330-412-6268
             </a>
-            <span className="font-heading italic text-2xl text-slate-400">— Aaron J.</span>
+            <span className="font-heading italic text-2xl text-slate-400 hidden sm:inline-block">— Aaron J.</span>
           </div>
         </div>
       </div>
@@ -911,8 +927,8 @@ function OwnerSpotlight() {
 
 function ServiceArea() {
   return (
-    <section className="py-20 sm:py-24 bg-slate-50">
-      <div className="max-w-6xl mx-auto px-5 sm:px-6">
+    <section className="py-12 sm:py-24 bg-slate-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
           <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
             <MapPin className="size-4 inline mr-1 -mt-0.5" />
@@ -969,8 +985,8 @@ function QuoteSection() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="quote" className="py-20 sm:py-24 bg-navy text-white">
-      <div className="max-w-6xl mx-auto px-5 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16">
+    <section id="quote" className="py-12 sm:py-24 bg-navy text-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16">
         <div>
           <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
             Get a free quote
@@ -1012,7 +1028,7 @@ function QuoteSection() {
             e.preventDefault();
             setSubmitted(true);
           }}
-          className="bg-slate-900/60 ring-1 ring-slate-800 rounded-3xl p-7 sm:p-9"
+          className="bg-slate-900/60 ring-1 ring-slate-800 rounded-3xl p-5 sm:p-9"
         >
           {submitted ? (
             <div className="text-center py-12">
@@ -1112,8 +1128,8 @@ function Field({
 
 function Footer() {
   return (
-    <footer className="bg-slate-100 py-16 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
+    <footer className="bg-slate-100 py-10 sm:py-16 border-t border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
         {/* Column 1: Logo & Description */}
         <div className="space-y-4">
           <img
@@ -1191,7 +1207,7 @@ function Footer() {
       </div>
       
       {/* Footer Bottom */}
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 mt-12 pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-12 pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between">
         <span>© {new Date().getFullYear()} Come In Handy Atlanta. Owner Operated by Aaron Johnson.</span>
         <span>Licensed & Insured</span>
       </div>
