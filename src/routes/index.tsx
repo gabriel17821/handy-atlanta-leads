@@ -25,6 +25,9 @@ import {
 } from "lucide-react";
 import aaronPortrait from "../assets/aaron.jpg";
 import logoImg from "../assets/logo.png";
+import garageCleanout from "../assets/garage-cleanout.png";
+import yardDebris from "../assets/yard-debris.png";
+import furnitureDisposal from "../assets/furniture-disposal.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -90,6 +93,7 @@ function Index() {
       <Services />
       <FullServiceList />
       <HowItWorks />
+      <Gallery />
       <YelpReview />
       <OwnerSpotlight />
       <ServiceArea />
@@ -488,6 +492,82 @@ function HowItWorks() {
               </div>
               <h3 className="font-heading font-bold text-2xl mt-3 mb-3">{title}</h3>
               <p className="text-slate-600 leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Gallery() {
+  const items = [
+    {
+      title: "Garage Clean-out",
+      desc: "Full removal of old storage boxes, furniture, and junk. Swept clean afterward.",
+      category: "Junk Removal",
+      image: garageCleanout,
+    },
+    {
+      title: "Backyard Debris Cleanup",
+      desc: "Clearing piled-up branches, brush, leaves, and organic yard waste.",
+      category: "Hauling",
+      image: yardDebris,
+    },
+    {
+      title: "Furniture & Estate Disposal",
+      desc: "Clearing out heavy old couches, chairs, and electronic junk from residential spaces.",
+      category: "Clean-outs",
+      image: furnitureDisposal,
+    },
+  ];
+
+  return (
+    <section id="gallery" className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
+        <div className="text-center mb-14">
+          <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
+            Our Work
+          </p>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+            Before & After Gallery
+          </h2>
+          <p className="text-slate-600 mt-4 max-w-xl mx-auto leading-relaxed">
+            See the actual results of Aaron's work across Atlanta. Move-out cleanouts, yard waste hauling, and same-day junk clearing.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {items.map(({ title, desc, category, image }) => (
+            <div
+              key={title}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200/60 group hover:shadow-xl transition-all duration-300"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={image}
+                  alt={`${title} Before and After`}
+                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  loading="lazy"
+                />
+                <span className="absolute top-4 left-4 bg-navy text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">
+                  {category}
+                </span>
+                
+                {/* Before & After Labels Overlay */}
+                <div className="absolute bottom-3 left-3 right-3 flex justify-between pointer-events-none">
+                  <span className="bg-red-600/90 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow-sm">
+                    Before
+                  </span>
+                  <span className="bg-green-600/90 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow-sm">
+                    After
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-heading font-bold text-xl text-navy mb-2">{title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{desc}</p>
+              </div>
             </div>
           ))}
         </div>
