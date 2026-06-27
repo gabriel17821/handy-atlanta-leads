@@ -133,13 +133,40 @@ function Nav() {
   );
 }
 
+function LightField({
+  label,
+  name,
+  type = "text",
+  placeholder,
+  required,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  placeholder?: string;
+  required?: boolean;
+}) {
+  return (
+    <div className="grid gap-1.5">
+      <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">{label}</label>
+      <input
+        name={name}
+        type={type}
+        placeholder={placeholder}
+        required={required}
+        className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white transition-all"
+      />
+    </div>
+  );
+}
+
 function Hero() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <header id="top" className="pt-28 sm:pt-32 pb-16 sm:pb-20 px-5 sm:px-6">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-        <div>
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-12 sm:gap-16">
+        <div className="flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 text-brand text-xs font-bold uppercase tracking-wider mb-6">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75" />
@@ -147,7 +174,7 @@ function Hero() {
             </span>
             Available Today in Atlanta
           </div>
-          <h1 className="font-heading font-extrabold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.92] tracking-tighter mb-8">
+          <h1 className="font-heading font-extrabold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.92] tracking-tighter mb-8 max-w-3xl">
             WE CLEAR
             <br />
             <span className="text-brand italic uppercase">THE JUNK</span>,
@@ -156,28 +183,28 @@ function Hero() {
             <br />
             THE PEACE.
           </h1>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-md mb-10 leading-relaxed">
+          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mb-10 leading-relaxed mx-auto">
             Professional hauling, junk removal, and move-out cleaning across
             metro Atlanta. Fast, affordable, and personal service from owner-operator{" "}
             <span className="text-navy font-semibold">Aaron Johnson</span>.
           </p>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-4 w-full sm:w-auto">
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
+              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 w-full sm:w-auto"
             >
               <Phone className="size-5" />
               Call Aaron Now
             </a>
             <a
               href="#hero-quote-form"
-              className="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 text-navy px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:border-navy transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 text-navy px-7 py-4 rounded-2xl font-bold text-base sm:text-lg hover:border-navy transition-colors w-full sm:w-auto"
             >
               Get Free Quote
               <ArrowRight className="size-5" />
             </a>
           </div>
-          <div className="flex items-center gap-3 mt-8">
+          <div className="flex items-center justify-center gap-3 mt-10">
             <img
               src={aaronPortrait}
               alt="Aaron Johnson, owner of Come In Handy Atlanta"
@@ -186,18 +213,18 @@ function Hero() {
               loading="lazy"
               className="size-12 rounded-full object-cover border-4 border-white shadow-md"
             />
-            <div>
+            <div className="text-left">
               <p className="text-sm font-bold">Owner Operated</p>
               <p className="text-xs text-slate-500">Talk to Aaron directly — no call centers.</p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 w-full">
+        <div className="flex flex-col gap-6 w-full max-w-xl mx-auto">
           {/* Quote Form Card */}
-          <div id="hero-quote-form" className="bg-slate-900 ring-1 ring-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+          <div id="hero-quote-form" className="bg-white ring-1 ring-slate-200 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden border border-slate-100 text-left">
             {/* Decorative background glow */}
-            <div className="absolute -top-24 -right-24 size-48 rounded-full bg-brand/10 blur-3xl pointer-events-none" />
+            <div className="absolute -top-24 -right-24 size-48 rounded-full bg-brand/5 blur-3xl pointer-events-none" />
             
             <form
               onSubmit={(e) => {
@@ -207,21 +234,21 @@ function Hero() {
               className="space-y-4 relative z-10"
             >
               <div className="mb-2">
-                <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-white">Get a Free Same-Day Quote</h3>
-                <p className="text-xs text-slate-400">Aaron will call you back personally in minutes.</p>
+                <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-navy">Get a Free Same-Day Quote</h3>
+                <p className="text-xs text-slate-500">Aaron will call you back personally in minutes.</p>
               </div>
 
               {submitted ? (
                 <div className="text-center py-8">
-                  <div className="size-14 rounded-full bg-brand/20 grid place-items-center mx-auto mb-4 animate-bounce">
+                  <div className="size-14 rounded-full bg-brand/10 grid place-items-center mx-auto mb-4 animate-bounce">
                     <Check className="size-6 text-brand" />
                   </div>
-                  <h4 className="font-heading font-bold text-lg text-white mb-2">Request Received!</h4>
-                  <p className="text-xs text-slate-400 mb-5">
+                  <h4 className="font-heading font-bold text-lg text-navy mb-2">Request Received!</h4>
+                  <p className="text-xs text-slate-500 mb-5">
                     Aaron will reach out to you within the hour.
                   </p>
-                  <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-                    <p className="text-xs text-slate-400 mb-2">Need immediate service?</p>
+                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <p className="text-xs text-slate-500 mb-2 font-medium">Need immediate service?</p>
                     <a
                       href={PHONE_HREF}
                       className="inline-flex items-center justify-center gap-2 bg-brand text-white w-full py-3 rounded-xl font-bold text-sm hover:scale-[1.01] transition-transform"
@@ -234,18 +261,18 @@ function Hero() {
               ) : (
                 <div className="grid gap-4">
                   <div className="grid sm:grid-cols-2 gap-3">
-                    <Field label="Name" name="name" placeholder="Your name" required />
-                    <Field label="Phone" name="phone" type="tel" placeholder="(404) 000-0000" required />
+                    <LightField label="Name" name="name" placeholder="Your name" required />
+                    <LightField label="Phone" name="phone" type="tel" placeholder="(404) 000-0000" required />
                   </div>
                   <div className="grid sm:grid-cols-2 gap-3">
-                    <Field label="Address or ZIP" name="zip" placeholder="Atlanta, GA" />
-                    <div className="grid gap-2">
-                      <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                    <LightField label="Address or ZIP" name="zip" placeholder="Atlanta, GA" />
+                    <div className="grid gap-1.5">
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                         Service Needed
                       </label>
                       <select
                         name="service"
-                        className="w-full rounded-xl bg-slate-800/80 px-4 py-3 text-sm text-white ring-1 ring-slate-700 focus:outline-none focus:ring-brand"
+                        className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white transition-all"
                       >
                         <option>Junk removal</option>
                         <option>Property clean-out</option>
@@ -256,15 +283,15 @@ function Hero() {
                       </select>
                     </div>
                   </div>
-                  <div className="grid gap-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                  <div className="grid gap-1.5">
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                       Tell Aaron about the job
                     </label>
                     <textarea
                       name="details"
                       rows={2}
                       placeholder="What needs to go? Roughly how much?"
-                      className="w-full rounded-xl bg-slate-800/80 px-4 py-3 text-sm text-white ring-1 ring-slate-700 focus:outline-none focus:ring-brand min-h-[70px]"
+                      className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white transition-all min-h-[70px]"
                     />
                   </div>
                   <button
@@ -280,7 +307,7 @@ function Hero() {
           </div>
 
           {/* Testimonial Quote Bubble */}
-          <div className="bg-white/90 backdrop-blur-md ring-1 ring-slate-200/80 rounded-2xl p-4 sm:p-5 shadow-lg flex flex-col gap-2 border border-white/50">
+          <div className="bg-brand/5 ring-1 ring-brand/10 rounded-2xl p-4 sm:p-5 shadow-sm flex flex-col gap-2 border border-brand/5 text-left">
             <div className="flex gap-0.5 text-brand">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className="size-3.5 fill-brand text-brand" />
@@ -289,9 +316,9 @@ function Hero() {
             <p className="text-xs sm:text-sm italic text-slate-750 leading-relaxed font-medium">
               “I had a huge project and wasn't sure how I was going to get it done… Aaron came in handy and did just that.”
             </p>
-            <div className="flex items-center justify-between text-[11px] border-t border-slate-100 pt-2 mt-1">
+            <div className="flex items-center justify-between text-[11px] border-t border-brand/10 pt-2 mt-1">
               <span className="font-bold text-navy">— Melissa S.</span>
-              <span className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Yelp</span>
+              <span className="text-[10px] uppercase tracking-wider text-brand font-semibold">Yelp</span>
             </div>
           </div>
         </div>
