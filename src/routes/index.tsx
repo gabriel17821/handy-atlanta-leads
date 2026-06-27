@@ -584,9 +584,19 @@ function YelpReview() {
           <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
             Straight from Yelp
           </p>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl tracking-tight">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl tracking-tight mb-4">
             What Melissa said about her project
           </h2>
+          <a
+            href="https://m.yelp.com/biz/come-in-handy-atlanta"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-brand bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm transition-all hover:scale-[1.02]"
+          >
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            Verify on Yelp.com
+            <ArrowUpRight className="size-3.5" />
+          </a>
         </div>
 
         {/* Review card */}
