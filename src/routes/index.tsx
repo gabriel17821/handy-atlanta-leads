@@ -71,7 +71,6 @@ const allServices = [
   { icon: Boxes, label: "Property clean-out" },
   { icon: Home, label: "Move-in / move-out cleaning" },
   { icon: Sparkles, label: "Regular home cleaning" },
-  { icon: Truck, label: "In-state moving" },
   { icon: Leaf, label: "Landscaping waste" },
 ];
 
@@ -92,7 +91,7 @@ const areas = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-slate-50 font-body text-navy selection:bg-brand/20">
+    <div className="min-h-screen bg-sky-50 font-body text-navy selection:bg-brand/20">
       <Nav />
       <Hero />
       <TrustStrip />
@@ -366,7 +365,6 @@ function Hero() {
 function TrustStrip() {
   const items = [
     { icon: Clock, label: "Same-Day Availability" },
-    { icon: ShieldCheck, label: "Licensed & Insured" },
     { icon: Star, label: "5-Star Yelp Rated" },
     { icon: MapPin, label: "Atlanta Area" },
     { icon: Truck, label: "Owner-Operated" },
@@ -376,11 +374,11 @@ function TrustStrip() {
   const duplicatedItems = [...items, ...items, ...items, ...items];
 
   return (
-    <section className="border-y border-slate-200 bg-white py-4 overflow-hidden select-none">
+    <section className="border-y border-slate-200 bg-sky-50 py-4 overflow-hidden select-none">
       <div className="relative w-full">
         {/* Subtle gradients at edges to fade content in and out */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none bg-gradient-to-r from-white via-white/80 to-transparent" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none bg-gradient-to-l from-white via-white/80 to-transparent" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none bg-gradient-to-r from-sky-50 via-sky-50/80 to-transparent" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none bg-gradient-to-l from-sky-50 via-sky-50/80 to-transparent" />
 
         <div className="ticker-track animate-ticker flex gap-16 items-center">
           {duplicatedItems.map(({ icon: Icon, label }, idx) => (
@@ -499,7 +497,7 @@ function Services() {
 
 function FullServiceList() {
   return (
-    <section className="py-12 sm:py-24 bg-slate-50">
+    <section className="py-12 sm:py-24 bg-sky-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12">
           <p className="text-brand text-xs font-bold uppercase tracking-widest mb-2 sm:mb-3">
@@ -557,7 +555,7 @@ function HowItWorks() {
     },
   ];
   return (
-    <section className="py-12 sm:py-24 bg-white border-y border-slate-200">
+    <section className="py-12 sm:py-24 bg-sky-50 border-y border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14">
           <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
@@ -671,7 +669,7 @@ function Gallery() {
   return (
     <section
       id="gallery"
-      className="py-12 sm:py-24 bg-slate-50 border-b border-slate-200 overflow-hidden"
+      className="py-12 sm:py-24 bg-sky-50 border-b border-slate-200 overflow-hidden"
     >
       <style>{`
         @keyframes gallery-scroll {
@@ -714,8 +712,8 @@ function Gallery() {
       {/* Infinite scroll track */}
       <div className="relative w-full">
         {/* Edge fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 z-10 pointer-events-none bg-gradient-to-r from-slate-50 to-transparent" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 z-10 pointer-events-none bg-gradient-to-l from-slate-50 to-transparent" />
+        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 z-10 pointer-events-none bg-gradient-to-r from-sky-50 to-transparent" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 z-10 pointer-events-none bg-gradient-to-l from-sky-50 to-transparent" />
 
         <div className="gallery-track" style={{ gap: "1.5rem", padding: "0.5rem 1.5rem 1.5rem" }}>
           {loopItems.map(({ title, desc, category, image, location }, idx) => (
@@ -796,7 +794,7 @@ function Gallery() {
 
 function YelpReview() {
   return (
-    <section id="reviews" className="py-12 sm:py-24 bg-slate-50">
+    <section id="reviews" className="py-12 sm:py-24 bg-sky-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* LEFT — review content */}
@@ -922,7 +920,7 @@ function YelpReview() {
 
 function OwnerSpotlight() {
   return (
-    <section className="py-12 sm:py-24 bg-white">
+    <section className="py-12 sm:py-24 bg-sky-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-5 gap-6 lg:gap-12 items-center">
         <div className="lg:col-span-2 flex justify-center">
           <div className="size-32 sm:size-48 lg:w-full lg:max-w-sm lg:aspect-square bg-gradient-to-br from-brand/5 to-brand/10 rounded-full lg:rounded-3xl shadow-xl flex flex-col items-center justify-center border border-brand/10 p-4 sm:p-8">
@@ -969,7 +967,7 @@ function OwnerSpotlight() {
 
 function ServiceArea() {
   return (
-    <section className="py-12 sm:py-24 bg-slate-50">
+    <section className="py-12 sm:py-24 bg-sky-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
           <p className="text-brand text-xs font-bold uppercase tracking-widest mb-3">
@@ -1060,8 +1058,8 @@ function QuoteSection() {
               <span>Same-day appointments available</span>
             </div>
             <div className="flex items-center gap-3">
-              <ShieldCheck className="size-5 text-brand shrink-0" />
-              <span>Licensed, insured, owner-operated</span>
+              <User className="size-5 text-brand shrink-0" />
+              <span>100% owner-operated service</span>
             </div>
           </div>
         </div>
@@ -1177,7 +1175,7 @@ function Field({
 
 function Footer() {
   return (
-    <footer className="bg-slate-100 py-10 sm:py-16 border-t border-slate-200">
+    <footer className="bg-sky-100/50 py-10 sm:py-16 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
         {/* Column 1: Logo & Description */}
         <div className="space-y-4">
@@ -1293,7 +1291,7 @@ function Footer() {
         <span>
           © {new Date().getFullYear()} Come In Handy Atlanta. Owner Operated by Aaron Johnson.
         </span>
-        <span>Licensed & Insured</span>
+        <span>Locally Owned & Operated</span>
       </div>
     </footer>
   );
