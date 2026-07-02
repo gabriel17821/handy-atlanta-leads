@@ -116,9 +116,9 @@ function Nav() {
           <img
             src={logoImg}
             alt="Come In Handy — Hauling & Cleaning"
-            width={120}
-            height={80}
-            className="h-16 sm:h-24 w-auto object-contain"
+            width={96}
+            height={96}
+            className="h-16 sm:h-24 w-16 sm:w-24 object-cover rounded-full border-2 border-brand"
           />
           <span className="hidden sm:inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-brand">
             Atlanta
@@ -1178,10 +1178,10 @@ function Footer() {
           <img
             src={logoImg}
             alt="Come In Handy — Hauling & Cleaning"
-            width={96}
+            width={64}
             height={64}
             loading="lazy"
-            className="h-16 w-auto object-contain"
+            className="h-16 w-16 object-cover rounded-full border border-brand"
           />
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand">Atlanta, GA</p>
           <p className="text-sm text-slate-600 leading-relaxed">
