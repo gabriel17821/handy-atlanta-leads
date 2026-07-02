@@ -1050,10 +1050,6 @@ function QuoteSection() {
 
           <div className="space-y-4 text-slate-300">
             <div className="flex items-center gap-3">
-              <Clock className="size-5 text-brand shrink-0" />
-              <span>Mon“Sat: 8:00 AM “ 7:00 PM</span>
-            </div>
-            <div className="flex items-center gap-3">
               <Calendar className="size-5 text-brand shrink-0" />
               <span>Same-day appointments available</span>
             </div>
@@ -1273,9 +1269,7 @@ function Footer() {
                 Support@ComeInHandyHauling.com
               </a>
             </p>
-            <p>
-              <strong>Hours:</strong> Mon–Sat: 8:00 AM – 7:00 PM
-            </p>
+
             <p>
               <strong>Service Area:</strong> Atlanta, GA & surrounding areas
             </p>
