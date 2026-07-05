@@ -7,8 +7,9 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
-import { Phone, ChevronDown } from "lucide-react";
+import { useEffect, useState, type ReactNode } from "react";
+import { Phone, ChevronDown, Menu, X } from "lucide-react";
+import logoImg from "../assets/logo.png";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -132,13 +133,14 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function Nav() {
   const PHONE_HREF = "tel:+13304126268";
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 sm:h-28 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="/src/assets/logo.png"
+            src={logoImg}
             alt="Come In Handy — Hauling & Cleaning"
             width={120}
             height={80}
@@ -148,6 +150,8 @@ function Nav() {
             Atlanta
           </span>
         </Link>
+        
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
           <Link to="/" className="hover:text-navy transition-colors [&.active]:text-brand">
             Home
@@ -200,6 +204,8 @@ function Nav() {
             Contact
           </Link>
         </div>
+
+        {/* CTA Button */}
         <a
           href={PHONE_HREF}
           className="hidden sm:inline-flex items-center gap-2 bg-navy text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-brand transition-colors"
@@ -207,7 +213,54 @@ function Nav() {
           <Phone className="size-4" />
           330-412-6268
         </a>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden p-2 text-slate-600 hover:text-brand transition-colors"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
+        </button>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl max-h-[calc(100vh-80px)] overflow-y-auto">
+          <div className="px-4 py-6 flex flex-col gap-4 font-medium text-slate-600">
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-brand transition-colors">Home</Link>
+            
+            <div className="flex flex-col gap-2">
+              <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} className="py-2 font-bold text-navy">Services</Link>
+              <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} className="pl-4 py-1 text-sm hover:text-brand transition-colors">Junk Removal</Link>
+              <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} className="pl-4 py-1 text-sm hover:text-brand transition-colors">Property Clean-Outs</Link>
+              <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} className="pl-4 py-1 text-sm hover:text-brand transition-colors">Pro Cleaning</Link>
+            </div>
+
+            <Link to="/reviews" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-brand transition-colors">Reviews</Link>
+            <Link to="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-brand transition-colors">Projects/Gallery</Link>
+            
+            <div className="flex flex-col gap-2">
+              <Link to="/service-areas" onClick={() => setIsMobileMenuOpen(false)} className="py-2 font-bold text-navy">Service Areas</Link>
+              <Link to="/service-areas" onClick={() => setIsMobileMenuOpen(false)} className="pl-4 py-1 text-sm hover:text-brand transition-colors">Buckhead</Link>
+              <Link to="/service-areas" onClick={() => setIsMobileMenuOpen(false)} className="pl-4 py-1 text-sm hover:text-brand transition-colors">Midtown</Link>
+              <Link to="/service-areas" onClick={() => setIsMobileMenuOpen(false)} className="pl-4 py-1 text-sm hover:text-brand transition-colors">Decatur</Link>
+              <Link to="/service-areas" onClick={() => setIsMobileMenuOpen(false)} className="pl-4 py-1 text-sm hover:text-brand transition-colors">Sandy Springs</Link>
+            </div>
+
+            <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-brand transition-colors">Blog</Link>
+            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="py-2 hover:text-brand transition-colors">Contact</Link>
+            
+            <a
+              href={PHONE_HREF}
+              className="mt-4 flex items-center justify-center gap-2 bg-brand text-white px-5 py-3 rounded-xl font-bold hover:bg-navy transition-colors"
+            >
+              <Phone className="size-4" />
+              Call 330-412-6268
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
