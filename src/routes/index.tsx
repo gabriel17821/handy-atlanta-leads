@@ -91,8 +91,7 @@ const areas = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-sky-50 font-body text-navy selection:bg-brand/20">
-      <Nav />
+    <div>
       <Hero />
       <TrustStrip />
       <Services />
@@ -103,7 +102,6 @@ function Index() {
       <OwnerSpotlight />
       <ServiceArea />
       <QuoteSection />
-      <Footer />
     </div>
   );
 }
@@ -393,7 +391,7 @@ function TrustStrip() {
   );
 }
 
-function Services() {
+export function Services() {
   const cards = [
     {
       icon: Truck,
@@ -495,7 +493,7 @@ function Services() {
   );
 }
 
-function FullServiceList() {
+export function FullServiceList() {
   return (
     <section className="py-12 sm:py-24 bg-sky-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -617,7 +615,7 @@ function HowItWorks() {
   );
 }
 
-function Gallery() {
+export function Gallery() {
   const items = [
     {
       title: "Garage Clean-out",
@@ -792,7 +790,7 @@ function Gallery() {
   );
 }
 
-function YelpReview() {
+export function YelpReview() {
   return (
     <section id="reviews" className="py-12 sm:py-24 bg-sky-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -965,7 +963,7 @@ function OwnerSpotlight() {
   );
 }
 
-function ServiceArea() {
+export function ServiceArea() {
   return (
     <section className="py-12 sm:py-24 bg-sky-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -1022,7 +1020,7 @@ function ServiceArea() {
   );
 }
 
-function QuoteSection() {
+export function QuoteSection() {
   const [submitted, setSubmitted] = useState(false);
 
   return (

@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { Phone, ChevronDown } from "lucide-react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -129,13 +130,113 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function Nav() {
+  const PHONE_HREF = "tel:+13304126268";
+
+  return (
+    <nav className="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 sm:h-28 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2">
+          <img
+            src="/src/assets/logo.png"
+            alt="Come In Handy — Hauling & Cleaning"
+            width={120}
+            height={80}
+            className="h-16 sm:h-24 w-auto object-contain"
+          />
+          <span className="hidden sm:inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-brand">
+            Atlanta
+          </span>
+        </Link>
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <Link to="/" className="hover:text-navy transition-colors [&.active]:text-brand">
+            Home
+          </Link>
+
+          {/* Services Dropdown */}
+          <div className="relative group py-4">
+            <Link to="/services" className="flex items-center gap-1 hover:text-navy transition-colors [&.active]:text-brand cursor-pointer">
+              Services <ChevronDown className="size-3" />
+            </Link>
+            <div className="absolute top-full left-0 mt-0 w-48 bg-white border border-slate-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="py-2 flex flex-col">
+                <Link to="/services" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">All Services</Link>
+                <Link to="/services" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">Junk Removal</Link>
+                <Link to="/services" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">Property Clean-Outs</Link>
+                <Link to="/services" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">Pro Cleaning</Link>
+              </div>
+            </div>
+          </div>
+
+          <Link to="/reviews" className="hover:text-navy transition-colors [&.active]:text-brand">
+            Reviews
+          </Link>
+          
+          <Link to="/gallery" className="hover:text-navy transition-colors [&.active]:text-brand">
+            Projects/Gallery
+          </Link>
+
+          {/* Service Areas Dropdown */}
+          <div className="relative group py-4">
+            <Link to="/service-areas" className="flex items-center gap-1 hover:text-navy transition-colors [&.active]:text-brand cursor-pointer">
+              Service Areas <ChevronDown className="size-3" />
+            </Link>
+            <div className="absolute top-full left-0 mt-0 w-48 bg-white border border-slate-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="py-2 flex flex-col">
+                <Link to="/service-areas" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">All Areas</Link>
+                <Link to="/service-areas" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">Buckhead</Link>
+                <Link to="/service-areas" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">Midtown</Link>
+                <Link to="/service-areas" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">Decatur</Link>
+                <Link to="/service-areas" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">Sandy Springs</Link>
+              </div>
+            </div>
+          </div>
+
+          <Link to="/blog" className="hover:text-navy transition-colors [&.active]:text-brand">
+            Blog
+          </Link>
+          
+          <Link to="/contact" className="hover:text-navy transition-colors [&.active]:text-brand">
+            Contact
+          </Link>
+        </div>
+        <a
+          href={PHONE_HREF}
+          className="hidden sm:inline-flex items-center gap-2 bg-navy text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-brand transition-colors"
+        >
+          <Phone className="size-4" />
+          330-412-6268
+        </a>
+      </div>
+    </nav>
+  );
+}
+
+function Footer() {
+  const currentYear = new Date().getFullYear();
+  return (
+    <footer className="bg-navy py-12 text-center text-slate-400 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <p>© {currentYear} Come In Handy Atlanta. All rights reserved.</p>
+        <p className="mt-2 text-sm">Locally owned and operated by Aaron Johnson.</p>
+      </div>
+    </footer>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <Nav />
+      <div className="min-h-screen bg-sky-50 font-body text-navy selection:bg-brand/20">
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <div className="pt-28">
+          <Outlet />
+        </div>
+      </div>
+      <Footer />
     </QueryClientProvider>
   );
 }
