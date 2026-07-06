@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Calendar, User, Tag, Clock } from "lucide-react";
+import { ArrowRight, Calendar, User, Tag, Clock, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/blog")({
   component: BlogPage,
