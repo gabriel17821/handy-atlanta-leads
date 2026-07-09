@@ -18,13 +18,13 @@ function ServiceAreasPage() {
       <section className="relative pt-32 pb-24 px-4 sm:px-6 bg-slate-900 text-white overflow-hidden">
         {/* Atlanta Skyline / Map background abstract */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20 mix-[...]
+          <div className="absolute top-0 right-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1575917649705-5b59aaa12e6b?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay" />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent" />
         </div>
         
         <div className="relative max-w-7xl mx-auto z-10 flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 text-brand-light text-xs font-bold uppercase tracking-widest mb-6 border border-brand/30 backdrop-bl[...]
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 text-brand-light text-xs font-bold uppercase tracking-widest mb-6 border border-brand/30 backdrop-blur-md">
               <MapPin className="size-3" /> Locally Owned
             </div>
             <h1 className="font-heading font-extrabold text-5xl sm:text-6xl tracking-tight mb-6">
@@ -38,7 +38,7 @@ function ServiceAreasPage() {
             </p>
             <a
               href="tel:+14703349282"
-              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand/3[...]
+              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
             >
               Call Aaron Now
             </a>

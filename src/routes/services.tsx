@@ -23,7 +23,7 @@ function ServicesPage() {
         </div>
         
         <div className="relative max-w-7xl mx-auto z-10 text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 text-slate-300 text-xs font-bold uppercase tracking-widest mb-6 border border-white/10 backdrop-blur-md[...]
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 text-slate-300 text-xs font-bold uppercase tracking-widest mb-6 border border-white/10 backdrop-blur-md">
             What We Do
           </div>
           <h1 className="font-heading font-extrabold text-5xl sm:text-6xl lg:text-7xl tracking-tight mb-6">
@@ -38,13 +38,13 @@ function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
              <a
               href="tel:+14703349282"
-              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand/[...]
+              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
             >
               Call for a Free Quote
             </a>
             <a
               href="#full-list"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-base hover:bg-white/20 transition-colors b[...]
+              className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-base hover:bg-white/20 transition-colors backdrop-blur-sm"
             >
               View Full List
             </a>
