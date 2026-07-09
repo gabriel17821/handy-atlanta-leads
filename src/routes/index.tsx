@@ -42,21 +42,21 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Atlanta's owner-operated junk removal, hauling, and cleaning service. Same-day pickup for furniture, appliances, yard debris & property clean-outs. Call Aaron: 330-412-6268.",
+          "Atlanta's owner-operated junk removal, hauling, and cleaning service. Same-day pickup for furniture, appliances, yard debris & property clean-outs. Call Aaron: 470-334-9282.",
       },
       { property: "og:title", content: "Come In Handy Atlanta — Same-Day Junk Removal & Hauling" },
       {
         property: "og:description",
         content:
-          "Owner-operated junk removal and cleaning in Atlanta. Fast, affordable, personal. Call Aaron at 330-412-6268.",
+          "Owner-operated junk removal and cleaning in Atlanta. Fast, affordable, personal. Call Aaron at 470-334-9282.",
       },
     ],
   }),
   component: Index,
 });
 
-const PHONE = "+1 470-495-8121";
-const PHONE_HREF = "tel:+14704958121";
+const PHONE = "+1 470-334-9282";
+const PHONE_HREF = "tel:+14703349282";
 
 const allServices = [
   { icon: Sofa, label: "Furniture disposal" },
@@ -141,7 +141,7 @@ function Nav() {
           className="hidden sm:inline-flex items-center gap-2 bg-navy text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-brand transition-colors"
         >
           <Phone className="size-4" />
-          470-495-8121
+          470-334-9282
         </a>
       </div>
     </nav>
@@ -171,7 +171,7 @@ function LightField({
         type={type}
         placeholder={placeholder}
         required={required}
-        className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white transition-all"
+        className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white trans[...]
       />
     </div>
   );
@@ -208,14 +208,14 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center justify-center gap-3 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-3 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-t[...]
             >
               <Phone className="size-5" />
-              Call Aaron: 470-495-8121
+              Call Aaron: 470-334-9282
             </a>
             <a
               href="#quote"
-              className="inline-flex items-center justify-center gap-3 bg-white text-navy border border-slate-200 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:bg-slate-50 transition-colors w-full sm:w-auto lg:hidden"
+              className="inline-flex items-center justify-center gap-3 bg-white text-navy border border-slate-200 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:bg[...]
             >
               Get Free Quote
             </a>
@@ -321,12 +321,12 @@ function Hero() {
                       name="details"
                       rows={2}
                       placeholder="What needs to go? Roughly how much?"
-                      className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white transition-all min-h-[70px]"
+                      className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:[...]
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-brand text-white py-3.5 rounded-xl font-bold text-base hover:scale-[1.01] transition-transform shadow-lg shadow-brand/20"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-brand text-white py-3.5 rounded-xl font-bold text-base hover:scale-[1.01] transition-transform shadow-lg sha[...]
                   >
                     Request Free Quote
                     <ArrowRight className="size-4" />
@@ -344,8 +344,8 @@ function Hero() {
               ))}
             </div>
             <p className="text-xs sm:text-sm italic text-slate-750 leading-relaxed font-medium">
-              “I had a huge project and wasn't sure how I was going to get it done… Aaron came in
-              handy and did just that.”
+              "I had a huge project and wasn't sure how I was going to get it done… Aaron came in
+              handy and did just that."
             </p>
             <div className="flex items-center justify-between text-[11px] border-t border-brand/10 pt-2 mt-1">
               <span className="font-bold text-navy">— Melissa S.</span>
@@ -485,7 +485,7 @@ export function Services() {
             className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-base hover:bg-white/10 transition-colors"
           >
             <Phone className="size-4" />
-            Or Call Aaron: 470-495-8121
+            Or Call Aaron: 470-334-9282
           </a>
         </div>
       </div>
@@ -523,10 +523,10 @@ export function FullServiceList() {
         <div className="mt-10 sm:mt-12 text-center">
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center gap-2 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-brand/20 text-sm sm:text-base w-full sm:w-auto justify-center"
+            className="inline-flex items-center gap-2 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-brand/20 text-[...]
           >
             <Phone className="size-4" />
-            <span>Still not sure? Call Aaron: 470-495-8121</span>
+            <span>Still not sure? Call Aaron: 470-334-9282</span>
           </a>
         </div>
       </div>
@@ -539,7 +539,7 @@ function HowItWorks() {
     {
       n: "01",
       title: "Call or text Aaron",
-      desc: "One quick call to 330-412-6268. Send a photo of what needs to go — get a no-pressure ballpark on the spot.",
+      desc: "One quick call to 470-334-9282. Send a photo of what needs to go — get a no-pressure ballpark on the spot.",
     },
     {
       n: "02",
@@ -595,15 +595,15 @@ function HowItWorks() {
             <a
               href={PHONE_HREF}
               id="how-it-works-cta-call"
-              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
+              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand[...]
             >
               <Phone className="size-5" />
-              Call Aaron Now: 470-495-8121
+              Call Aaron Now: 470-334-9282
             </a>
             <a
               href="#quote"
               id="how-it-works-cta-quote"
-              className="inline-flex items-center justify-center gap-2 border border-slate-200 text-navy px-8 py-4 rounded-2xl font-bold text-base hover:border-brand hover:text-brand transition-colors"
+              className="inline-flex items-center justify-center gap-2 border border-slate-200 text-navy px-8 py-4 rounded-2xl font-bold text-base hover:border-brand hover:text-brand transition-c[...]
             >
               <ArrowRight className="size-4" />
               Request a Quote Online
@@ -807,7 +807,7 @@ export function YelpReview() {
               href="https://m.yelp.com/biz/come-in-handy-atlanta"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-brand bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm transition-all hover:scale-[1.02] mb-8"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-brand bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm transition-all hover:[...]
             >
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               Verify on Yelp.com
@@ -832,10 +832,10 @@ export function YelpReview() {
                       ))}
                     </div>
                     <p className="text-slate-700 leading-relaxed text-[15px]">
-                      “Come in Handy did just that. I had a huge project and I wasn’t sure how I was
-                      going to get it done. I called a few companies but either they couldn’t fit me
+                      "Come in Handy did just that. I had a huge project and I wasn't sure how I was
+                      going to get it done. I called a few companies but either they couldn't fit me
                       in or the quotes were ridiculous. Aaron picked up himself, walked me through
-                      everything, and his crew handled the whole job same day. Highly recommend.”
+                      everything, and his crew handled the whole job same day. Highly recommend."
                     </p>
                   </div>
                 </div>
@@ -855,8 +855,8 @@ export function YelpReview() {
                       </span>
                     </div>
                     <p className="text-slate-700 leading-relaxed text-[15px] mt-3 italic">
-                      “That truly means a lot, and we greatly appreciate you choosing us, as well as
-                      your awesome review. Thank you so much!”
+                      "That truly means a lot, and we greatly appreciate you choosing us, as well as
+                      your awesome review. Thank you so much!"
                     </p>
                     <p className="mt-3 text-sm font-semibold text-slate-500">
                       — Aaron Johnson, Come In Handy (Owner Operator)
@@ -873,7 +873,7 @@ export function YelpReview() {
               className="inline-flex items-center gap-3 bg-brand text-white px-7 py-4 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
             >
               <Phone className="size-5" />
-              Call Aaron Now: 470-495-8121
+              Call Aaron Now: 470-334-9282
             </a>
           </div>
 
@@ -921,7 +921,7 @@ function OwnerSpotlight() {
     <section className="py-12 sm:py-24 bg-sky-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-5 gap-6 lg:gap-12 items-center">
         <div className="lg:col-span-2 flex justify-center">
-          <div className="size-32 sm:size-48 lg:w-full lg:max-w-sm lg:aspect-square bg-gradient-to-br from-brand/5 to-brand/10 rounded-full lg:rounded-3xl shadow-xl flex flex-col items-center justify-center border border-brand/10 p-4 sm:p-8">
+          <div className="size-32 sm:size-48 lg:w-full lg:max-w-sm lg:aspect-square bg-gradient-to-br from-brand/5 to-brand/10 rounded-full lg:rounded-3xl shadow-xl flex flex-col items-center jus[...]
             <User className="size-12 sm:size-16 lg:size-24 text-brand/35" />
             <span className="hidden lg:inline-block text-sm font-semibold text-slate-400 mt-4 uppercase tracking-wider">
               Aaron Johnson
@@ -951,7 +951,7 @@ function OwnerSpotlight() {
               className="inline-flex items-center justify-center gap-2 bg-navy text-white px-6 py-3.5 rounded-2xl font-bold hover:bg-brand transition-colors w-full sm:w-auto"
             >
               <Phone className="size-4" />
-              Call Aaron: 470-495-8121
+              Call Aaron: 470-334-9282
             </a>
             <span className="font-heading italic text-2xl text-slate-400 hidden sm:inline-block">
               — Aaron J.
@@ -1003,12 +1003,12 @@ export function ServiceArea() {
               className="inline-flex items-center justify-center gap-2 bg-navy text-white px-7 py-3.5 rounded-2xl font-bold hover:bg-brand transition-colors shadow-md"
             >
               <Phone className="size-4" />
-              Call Aaron: 470-495-8121
+              Call Aaron: 470-334-9282
             </a>
             <a
               href="#quote"
               id="service-area-cta-quote"
-              className="inline-flex items-center justify-center gap-2 border border-slate-200 bg-white text-navy px-7 py-3.5 rounded-2xl font-bold hover:border-brand hover:text-brand transition-colors shadow-sm"
+              className="inline-flex items-center justify-center gap-2 border border-slate-200 bg-white text-navy px-7 py-3.5 rounded-2xl font-bold hover:border-brand hover:text-brand transition[...]
             >
               <ArrowRight className="size-4" />
               Request a Free Quote
@@ -1043,7 +1043,7 @@ export function QuoteSection() {
             className="inline-flex items-center gap-3 bg-brand text-white px-6 py-4 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 mb-10"
           >
             <Phone className="size-5" />
-            330-412-6268
+            470-334-9282
           </a>
 
           <div className="space-y-4 text-slate-300">
@@ -1079,7 +1079,7 @@ export function QuoteSection() {
                 className="inline-flex items-center gap-2 bg-brand text-white px-6 py-3 rounded-2xl font-bold"
               >
                 <Phone className="size-4" />
-                470-495-8121
+                470-334-9282
               </a>
             </div>
           ) : (
@@ -1124,7 +1124,7 @@ export function QuoteSection() {
               </div>
               <button
                 type="submit"
-                className="mt-2 w-full inline-flex items-center justify-center gap-2 bg-brand text-white py-4 rounded-2xl font-bold text-lg hover:scale-[1.01] transition-transform shadow-lg shadow-brand/30"
+                className="mt-2 w-full inline-flex items-center justify-center gap-2 bg-brand text-white py-4 rounded-2xl font-bold text-lg hover:scale-[1.01] transition-transform shadow-lg shad[...]
               >
                 Request my free quote
                 <ArrowRight className="size-5" />
@@ -1255,7 +1255,7 @@ function Footer() {
             href={PHONE_HREF}
             className="block font-heading text-2xl font-bold tracking-tight text-navy hover:text-brand transition-colors mb-3"
           >
-            330-412-6268
+            470-334-9282
           </a>
           <div className="space-y-2 text-sm text-slate-600">
             <p>
