@@ -141,7 +141,7 @@ function Nav() {
           className="hidden sm:inline-flex items-center gap-2 bg-navy text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-brand transition-colors"
         >
           <Phone className="size-4" />
-          330-412-6268
+          470-495-8121
         </a>
       </div>
     </nav>
@@ -211,7 +211,7 @@ function Hero() {
               className="inline-flex items-center justify-center gap-3 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 w-full sm:w-auto"
             >
               <Phone className="size-5" />
-              Call Aaron: 330-412-6268
+              Call Aaron: 470-495-8121
             </a>
             <a
               href="#quote"
@@ -485,7 +485,7 @@ export function Services() {
             className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-base hover:bg-white/10 transition-colors"
           >
             <Phone className="size-4" />
-            Or Call Aaron: 330-412-6268
+            Or Call Aaron: 470-495-8121
           </a>
         </div>
       </div>
@@ -526,7 +526,7 @@ export function FullServiceList() {
             className="inline-flex items-center gap-2 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-brand/20 text-sm sm:text-base w-full sm:w-auto justify-center"
           >
             <Phone className="size-4" />
-            <span>Still not sure? Call Aaron: 330-412-6268</span>
+            <span>Still not sure? Call Aaron: 470-495-8121</span>
           </a>
         </div>
       </div>
@@ -598,7 +598,7 @@ function HowItWorks() {
               className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
             >
               <Phone className="size-5" />
-              Call Aaron Now: 330-412-6268
+              Call Aaron Now: 470-495-8121
             </a>
             <a
               href="#quote"
@@ -873,7 +873,7 @@ export function YelpReview() {
               className="inline-flex items-center gap-3 bg-brand text-white px-7 py-4 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
             >
               <Phone className="size-5" />
-              Call Aaron Now: 330-412-6268
+              Call Aaron Now: 470-495-8121
             </a>
           </div>
 
@@ -951,7 +951,7 @@ function OwnerSpotlight() {
               className="inline-flex items-center justify-center gap-2 bg-navy text-white px-6 py-3.5 rounded-2xl font-bold hover:bg-brand transition-colors w-full sm:w-auto"
             >
               <Phone className="size-4" />
-              Call Aaron: 330-412-6268
+              Call Aaron: 470-495-8121
             </a>
             <span className="font-heading italic text-2xl text-slate-400 hidden sm:inline-block">
               — Aaron J.
@@ -1003,7 +1003,7 @@ export function ServiceArea() {
               className="inline-flex items-center justify-center gap-2 bg-navy text-white px-7 py-3.5 rounded-2xl font-bold hover:bg-brand transition-colors shadow-md"
             >
               <Phone className="size-4" />
-              Call Aaron: 330-412-6268
+              Call Aaron: 470-495-8121
             </a>
             <a
               href="#quote"
@@ -1079,7 +1079,7 @@ export function QuoteSection() {
                 className="inline-flex items-center gap-2 bg-brand text-white px-6 py-3 rounded-2xl font-bold"
               >
                 <Phone className="size-4" />
-                330-412-6268
+                470-495-8121
               </a>
             </div>
           ) : (
