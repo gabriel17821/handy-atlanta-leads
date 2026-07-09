@@ -55,8 +55,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const PHONE = "+1 330-412-6268";
-const PHONE_HREF = "tel:+13304126268";
+const PHONE = "+1 470-495-8121";
+const PHONE_HREF = "tel:+14704958121";
 
 const allServices = [
   { icon: Sofa, label: "Furniture disposal" },
