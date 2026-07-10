@@ -171,7 +171,7 @@ function LightField({
         type={type}
         placeholder={placeholder}
         required={required}
-        className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white trans[...]
+        className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white transition-all"
       />
     </div>
   );
@@ -208,14 +208,14 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center justify-center gap-3 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-t[...]
+              className="inline-flex items-center justify-center gap-3 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 w-full sm:w-auto"
             >
               <Phone className="size-5" />
               Call Aaron: 470-334-9282
             </a>
             <a
               href="#quote"
-              className="inline-flex items-center justify-center gap-3 bg-white text-navy border border-slate-200 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:bg[...]
+              className="inline-flex items-center justify-center gap-3 bg-white text-navy border border-slate-200 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:bg-slate-50 transition-colors w-full sm:w-auto lg:hidden"
             >
               Get Free Quote
             </a>
@@ -321,12 +321,12 @@ function Hero() {
                       name="details"
                       rows={2}
                       placeholder="What needs to go? Roughly how much?"
-                      className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:[...]
+                      className="w-full rounded-xl bg-slate-50 px-4 py-3 text-sm text-navy placeholder:text-slate-400 ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand focus:bg-white transition-all min-h-[70px]"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-brand text-white py-3.5 rounded-xl font-bold text-base hover:scale-[1.01] transition-transform shadow-lg sha[...]
+                    className="w-full inline-flex items-center justify-center gap-2 bg-brand text-white py-3.5 rounded-xl font-bold text-base hover:scale-[1.01] transition-transform shadow-lg shadow-brand/20"
                   >
                     Request Free Quote
                     <ArrowRight className="size-4" />
@@ -344,8 +344,8 @@ function Hero() {
               ))}
             </div>
             <p className="text-xs sm:text-sm italic text-slate-750 leading-relaxed font-medium">
-              "I had a huge project and wasn't sure how I was going to get it done… Aaron came in
-              handy and did just that."
+              “I had a huge project and wasn't sure how I was going to get it done… Aaron came in
+              handy and did just that.”
             </p>
             <div className="flex items-center justify-between text-[11px] border-t border-brand/10 pt-2 mt-1">
               <span className="font-bold text-navy">— Melissa S.</span>
@@ -523,7 +523,7 @@ export function FullServiceList() {
         <div className="mt-10 sm:mt-12 text-center">
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center gap-2 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-brand/20 text-[...]
+            className="inline-flex items-center gap-2 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-brand/20 text-sm sm:text-base w-full sm:w-auto justify-center"
           >
             <Phone className="size-4" />
             <span>Still not sure? Call Aaron: 470-334-9282</span>
@@ -595,7 +595,7 @@ function HowItWorks() {
             <a
               href={PHONE_HREF}
               id="how-it-works-cta-call"
-              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand[...]
+              className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
             >
               <Phone className="size-5" />
               Call Aaron Now: 470-334-9282
@@ -603,7 +603,7 @@ function HowItWorks() {
             <a
               href="#quote"
               id="how-it-works-cta-quote"
-              className="inline-flex items-center justify-center gap-2 border border-slate-200 text-navy px-8 py-4 rounded-2xl font-bold text-base hover:border-brand hover:text-brand transition-c[...]
+              className="inline-flex items-center justify-center gap-2 border border-slate-200 text-navy px-8 py-4 rounded-2xl font-bold text-base hover:border-brand hover:text-brand transition-colors"
             >
               <ArrowRight className="size-4" />
               Request a Quote Online
@@ -807,7 +807,7 @@ export function YelpReview() {
               href="https://m.yelp.com/biz/come-in-handy-atlanta"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-brand bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm transition-all hover:[...]
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-brand bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm transition-all hover:scale-[1.02] mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               Verify on Yelp.com
@@ -832,10 +832,10 @@ export function YelpReview() {
                       ))}
                     </div>
                     <p className="text-slate-700 leading-relaxed text-[15px]">
-                      "Come in Handy did just that. I had a huge project and I wasn't sure how I was
-                      going to get it done. I called a few companies but either they couldn't fit me
+                      “Come in Handy did just that. I had a huge project and I wasn’t sure how I was
+                      going to get it done. I called a few companies but either they couldn’t fit me
                       in or the quotes were ridiculous. Aaron picked up himself, walked me through
-                      everything, and his crew handled the whole job same day. Highly recommend."
+                      everything, and his crew handled the whole job same day. Highly recommend.”
                     </p>
                   </div>
                 </div>
@@ -855,8 +855,8 @@ export function YelpReview() {
                       </span>
                     </div>
                     <p className="text-slate-700 leading-relaxed text-[15px] mt-3 italic">
-                      "That truly means a lot, and we greatly appreciate you choosing us, as well as
-                      your awesome review. Thank you so much!"
+                      “That truly means a lot, and we greatly appreciate you choosing us, as well as
+                      your awesome review. Thank you so much!”
                     </p>
                     <p className="mt-3 text-sm font-semibold text-slate-500">
                       — Aaron Johnson, Come In Handy (Owner Operator)
@@ -921,7 +921,7 @@ function OwnerSpotlight() {
     <section className="py-12 sm:py-24 bg-sky-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-5 gap-6 lg:gap-12 items-center">
         <div className="lg:col-span-2 flex justify-center">
-          <div className="size-32 sm:size-48 lg:w-full lg:max-w-sm lg:aspect-square bg-gradient-to-br from-brand/5 to-brand/10 rounded-full lg:rounded-3xl shadow-xl flex flex-col items-center jus[...]
+          <div className="size-32 sm:size-48 lg:w-full lg:max-w-sm lg:aspect-square bg-gradient-to-br from-brand/5 to-brand/10 rounded-full lg:rounded-3xl shadow-xl flex flex-col items-center justify-center border border-brand/10 p-4 sm:p-8">
             <User className="size-12 sm:size-16 lg:size-24 text-brand/35" />
             <span className="hidden lg:inline-block text-sm font-semibold text-slate-400 mt-4 uppercase tracking-wider">
               Aaron Johnson
@@ -1008,7 +1008,7 @@ export function ServiceArea() {
             <a
               href="#quote"
               id="service-area-cta-quote"
-              className="inline-flex items-center justify-center gap-2 border border-slate-200 bg-white text-navy px-7 py-3.5 rounded-2xl font-bold hover:border-brand hover:text-brand transition[...]
+              className="inline-flex items-center justify-center gap-2 border border-slate-200 bg-white text-navy px-7 py-3.5 rounded-2xl font-bold hover:border-brand hover:text-brand transition-colors shadow-sm"
             >
               <ArrowRight className="size-4" />
               Request a Free Quote
@@ -1124,7 +1124,7 @@ export function QuoteSection() {
               </div>
               <button
                 type="submit"
-                className="mt-2 w-full inline-flex items-center justify-center gap-2 bg-brand text-white py-4 rounded-2xl font-bold text-lg hover:scale-[1.01] transition-transform shadow-lg shad[...]
+                className="mt-2 w-full inline-flex items-center justify-center gap-2 bg-brand text-white py-4 rounded-2xl font-bold text-lg hover:scale-[1.01] transition-transform shadow-lg shadow-brand/30"
               >
                 Request my free quote
                 <ArrowRight className="size-5" />

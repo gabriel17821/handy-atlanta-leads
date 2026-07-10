@@ -162,7 +162,7 @@ function Nav() {
             <Link to="/services" className="flex items-center gap-1 hover:text-navy transition-colors [&.active]:text-brand cursor-pointer">
               Services <ChevronDown className="size-3" />
             </Link>
-            <div className="absolute top-full left-0 mt-0 w-48 bg-white border border-slate-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all[...]
+            <div className="absolute top-full left-0 mt-0 w-48 bg-white border border-slate-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div className="py-2 flex flex-col">
                 <Link to="/services" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">All Services</Link>
                 <Link to="/services" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">Junk Removal</Link>
@@ -185,7 +185,7 @@ function Nav() {
             <Link to="/service-areas" className="flex items-center gap-1 hover:text-navy transition-colors [&.active]:text-brand cursor-pointer">
               Service Areas <ChevronDown className="size-3" />
             </Link>
-            <div className="absolute top-full left-0 mt-0 w-48 bg-white border border-slate-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all[...]
+            <div className="absolute top-full left-0 mt-0 w-48 bg-white border border-slate-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div className="py-2 flex flex-col">
                 <Link to="/service-areas" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">All Areas</Link>
                 <Link to="/service-areas" className="px-4 py-2 hover:bg-slate-50 hover:text-brand text-sm transition-colors">Buckhead</Link>
