@@ -83,7 +83,7 @@ function BlogPage() {
         </div>
         
         <div className="relative max-w-7xl mx-auto z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 text-brand-light text-xs font-bold uppercase tracking-wider mb-6 border border-brand/30 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 text-brand-light text-xs font-bold uppercase tracking-wider mb-6 border border-brand/30 backdrop-blur-md">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
