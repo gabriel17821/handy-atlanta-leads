@@ -240,11 +240,11 @@ function BlogPage() {
                   Aaron is ready to haul. Fast, affordable, and fully insured. Call now for a free same-day quote.
                 </p>
                 <a 
-                  href="tel:+13304126268"
+                  href="tel:+14703349282"
                   className="flex items-center justify-center gap-2 bg-brand text-white w-full py-3.5 rounded-xl font-bold text-sm hover:scale-[1.02] transition-transform shadow-lg shadow-brand/20"
                 >
                   <Phone className="size-4" />
-                  Call 330-412-6268
+                  Call 470-334-9282
                 </a>
               </div>
             </div>

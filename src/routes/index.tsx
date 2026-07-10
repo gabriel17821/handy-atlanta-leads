@@ -42,21 +42,21 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Atlanta's owner-operated junk removal, hauling, and cleaning service. Same-day pickup for furniture, appliances, yard debris & property clean-outs. Call Aaron: 330-412-6268.",
+          "Atlanta's owner-operated junk removal, hauling, and cleaning service. Same-day pickup for furniture, appliances, yard debris & property clean-outs. Call Aaron: 470-334-9282.",
       },
       { property: "og:title", content: "Come In Handy Atlanta — Same-Day Junk Removal & Hauling" },
       {
         property: "og:description",
         content:
-          "Owner-operated junk removal and cleaning in Atlanta. Fast, affordable, personal. Call Aaron at 330-412-6268.",
+          "Owner-operated junk removal and cleaning in Atlanta. Fast, affordable, personal. Call Aaron at 470-334-9282.",
       },
     ],
   }),
   component: Index,
 });
 
-const PHONE = "+1 330-412-6268";
-const PHONE_HREF = "tel:+13304126268";
+const PHONE = "+1 470-334-9282";
+const PHONE_HREF = "tel:+14703349282";
 
 const allServices = [
   { icon: Sofa, label: "Furniture disposal" },
@@ -141,7 +141,7 @@ function Nav() {
           className="hidden sm:inline-flex items-center gap-2 bg-navy text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-brand transition-colors"
         >
           <Phone className="size-4" />
-          330-412-6268
+          470-334-9282
         </a>
       </div>
     </nav>
@@ -211,7 +211,7 @@ function Hero() {
               className="inline-flex items-center justify-center gap-3 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 w-full sm:w-auto"
             >
               <Phone className="size-5" />
-              Call Aaron: 330-412-6268
+              Call Aaron: 470-334-9282
             </a>
             <a
               href="#quote"
@@ -485,7 +485,7 @@ export function Services() {
             className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-base hover:bg-white/10 transition-colors"
           >
             <Phone className="size-4" />
-            Or Call Aaron: 330-412-6268
+            Or Call Aaron: 470-334-9282
           </a>
         </div>
       </div>
@@ -526,7 +526,7 @@ export function FullServiceList() {
             className="inline-flex items-center gap-2 bg-brand text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-brand/20 text-sm sm:text-base w-full sm:w-auto justify-center"
           >
             <Phone className="size-4" />
-            <span>Still not sure? Call Aaron: 330-412-6268</span>
+            <span>Still not sure? Call Aaron: 470-334-9282</span>
           </a>
         </div>
       </div>
@@ -539,7 +539,7 @@ function HowItWorks() {
     {
       n: "01",
       title: "Call or text Aaron",
-      desc: "One quick call to 330-412-6268. Send a photo of what needs to go — get a no-pressure ballpark on the spot.",
+      desc: "One quick call to 470-334-9282. Send a photo of what needs to go — get a no-pressure ballpark on the spot.",
     },
     {
       n: "02",
@@ -598,7 +598,7 @@ function HowItWorks() {
               className="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded-2xl font-bold text-base hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
             >
               <Phone className="size-5" />
-              Call Aaron Now: 330-412-6268
+              Call Aaron Now: 470-334-9282
             </a>
             <a
               href="#quote"
@@ -873,7 +873,7 @@ export function YelpReview() {
               className="inline-flex items-center gap-3 bg-brand text-white px-7 py-4 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30"
             >
               <Phone className="size-5" />
-              Call Aaron Now: 330-412-6268
+              Call Aaron Now: 470-334-9282
             </a>
           </div>
 
@@ -951,7 +951,7 @@ function OwnerSpotlight() {
               className="inline-flex items-center justify-center gap-2 bg-navy text-white px-6 py-3.5 rounded-2xl font-bold hover:bg-brand transition-colors w-full sm:w-auto"
             >
               <Phone className="size-4" />
-              Call Aaron: 330-412-6268
+              Call Aaron: 470-334-9282
             </a>
             <span className="font-heading italic text-2xl text-slate-400 hidden sm:inline-block">
               — Aaron J.
@@ -1003,7 +1003,7 @@ export function ServiceArea() {
               className="inline-flex items-center justify-center gap-2 bg-navy text-white px-7 py-3.5 rounded-2xl font-bold hover:bg-brand transition-colors shadow-md"
             >
               <Phone className="size-4" />
-              Call Aaron: 330-412-6268
+              Call Aaron: 470-334-9282
             </a>
             <a
               href="#quote"
@@ -1043,7 +1043,7 @@ export function QuoteSection() {
             className="inline-flex items-center gap-3 bg-brand text-white px-6 py-4 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-brand/30 mb-10"
           >
             <Phone className="size-5" />
-            330-412-6268
+            470-334-9282
           </a>
 
           <div className="space-y-4 text-slate-300">
@@ -1079,7 +1079,7 @@ export function QuoteSection() {
                 className="inline-flex items-center gap-2 bg-brand text-white px-6 py-3 rounded-2xl font-bold"
               >
                 <Phone className="size-4" />
-                330-412-6268
+                470-334-9282
               </a>
             </div>
           ) : (
@@ -1255,7 +1255,7 @@ function Footer() {
             href={PHONE_HREF}
             className="block font-heading text-2xl font-bold tracking-tight text-navy hover:text-brand transition-colors mb-3"
           >
-            330-412-6268
+            470-334-9282
           </a>
           <div className="space-y-2 text-sm text-slate-600">
             <p>

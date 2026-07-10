@@ -83,14 +83,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Atlanta's owner-operated junk removal, hauling, and cleaning service. Same-day pickup for furniture, appliances, yard debris & full property clean-outs. Call Aaron: 330-412-6268.",
+          "Atlanta's owner-operated junk removal, hauling, and cleaning service. Same-day pickup for furniture, appliances, yard debris & full property clean-outs. Call Aaron: 470-334-9282.",
       },
       { name: "author", content: "Come In Handy Atlanta" },
       { property: "og:title", content: "Come In Handy Atlanta — Same-Day Junk Removal & Hauling" },
       {
         property: "og:description",
         content:
-          "Owner-operated junk removal, hauling, and move-out cleaning in Atlanta. Fast, affordable, and personal. Call Aaron at 330-412-6268.",
+          "Owner-operated junk removal, hauling, and move-out cleaning in Atlanta. Fast, affordable, and personal. Call Aaron at 470-334-9282.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -132,7 +132,7 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function Nav() {
-  const PHONE_HREF = "tel:+13304126268";
+  const PHONE_HREF = "tel:+14703349282";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -211,7 +211,7 @@ function Nav() {
           className="hidden sm:inline-flex items-center gap-2 bg-navy text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-brand transition-colors"
         >
           <Phone className="size-4" />
-          330-412-6268
+          470-334-9282
         </a>
 
         {/* Mobile Menu Button */}
@@ -256,7 +256,7 @@ function Nav() {
               className="mt-4 flex items-center justify-center gap-2 bg-brand text-white px-5 py-3 rounded-xl font-bold hover:bg-navy transition-colors"
             >
               <Phone className="size-4" />
-              Call 330-412-6268
+              Call 470-334-9282
             </a>
           </div>
         </div>
