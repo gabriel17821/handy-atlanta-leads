@@ -243,8 +243,18 @@ function Hero() {
             <div className="absolute -top-24 -right-24 size-48 rounded-full bg-brand/5 blur-3xl pointer-events-none" />
 
             <form
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                try {
+                  await fetch("https://formsubmit.co/ajax/Support@ComeInHandyHauling.com", {
+                    method: "POST",
+                    headers: { Accept: "application/json" },
+                    body: formData,
+                  });
+                } catch (err) {
+                  console.error(err);
+                }
                 setSubmitted(true);
               }}
               className="space-y-4 relative z-10"
@@ -1059,8 +1069,18 @@ export function QuoteSection() {
         </div>
 
         <form
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
+            const formData = new FormData(e.currentTarget);
+            try {
+              await fetch("https://formsubmit.co/ajax/Support@ComeInHandyHauling.com", {
+                method: "POST",
+                headers: { Accept: "application/json" },
+                body: formData,
+              });
+            } catch (err) {
+              console.error(err);
+            }
             setSubmitted(true);
           }}
           className="bg-slate-900/60 ring-1 ring-slate-800 rounded-3xl p-5 sm:p-9"
