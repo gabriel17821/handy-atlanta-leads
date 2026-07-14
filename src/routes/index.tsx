@@ -233,7 +233,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="hidden lg:flex flex-col gap-6 w-full">
+        <div className="flex flex-col gap-6 w-full">
           {/* Quote Form Card */}
           <div
             id="hero-quote-form"
