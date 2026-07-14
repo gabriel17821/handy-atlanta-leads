@@ -247,7 +247,7 @@ function Hero() {
                 e.preventDefault();
                 const formData = new FormData(e.currentTarget);
                 try {
-                  await fetch("https://formsubmit.co/ajax/Support@ComeInHandyHauling.com", {
+                  await fetch("https://formsubmit.co/ajax/aspiredaaron@gmail.com", {
                     method: "POST",
                     headers: { Accept: "application/json" },
                     body: formData,
@@ -1073,7 +1073,7 @@ export function QuoteSection() {
             e.preventDefault();
             const formData = new FormData(e.currentTarget);
             try {
-              await fetch("https://formsubmit.co/ajax/Support@ComeInHandyHauling.com", {
+              await fetch("https://formsubmit.co/ajax/aspiredaaron@gmail.com", {
                 method: "POST",
                 headers: { Accept: "application/json" },
                 body: formData,
@@ -1281,10 +1281,10 @@ function Footer() {
             <p>
               <strong>Email:</strong>{" "}
               <a
-                href="mailto:Support@ComeInHandyHauling.com"
+                href="mailto:aspiredaaron@gmail.com"
                 className="hover:text-brand transition-colors font-medium text-slate-700"
               >
-                Support@ComeInHandyHauling.com
+                aspiredaaron@gmail.com
               </a>
             </p>
 
